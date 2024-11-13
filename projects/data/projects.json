@@ -1,0 +1,36 @@
+{
+    "projects": [
+        {
+            "id": "project-1",
+            "title": "E-commerce Platform",
+            "category": "development",
+            "description": "Modern e-commerce solution built with React and Node.js",
+            "thumbnail": "/projects/content/project-1/images/mockup-test.webp",
+            "images": [
+                "/projects/content/project-1/images/mockup-test.webp",
+                "/projects/content/project-1/images/mockup-test.webp",
+                "/projects/content/project-1/images/mockup-test.webp"
+            ],
+            "technologies": ["React", "Node.js", "MongoDB"],
+            "year": "2024",
+            "client": "Company Name",
+            "link": "https://project-url.com",
+            "featured": true
+        },
+        {
+            "id": "project-2",
+            "title": "Brand Identity",
+            "category": "design",
+            "description": "Complete brand identity design for a tech startup",
+            "thumbnail": "/projects/content/project-2/images/thumbnail.jpg",
+            "images": [
+                "/projects/content/project-2/images/main.jpg",
+                "/projects/content/project-2/images/detail-1.jpg"
+            ],
+            "technologies": ["Figma", "Photoshop", "Illustrator"],
+            "year": "2023",
+            "client": "Startup Name",
+            "featured": true
+        }
+    ]
+}

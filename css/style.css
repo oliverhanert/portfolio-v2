@@ -107,7 +107,7 @@ body {
 .project-item {
     position: relative;
     padding-top: 100%; /* 1:1 Aspect Ratio */
-    background: var(--color-bg);
+    background: var(--color-muted);
     overflow: hidden;
 }
 
@@ -122,6 +122,7 @@ body {
     justify-content: space-between;
     padding: 2rem;
     z-index: 2;
+    cursor: pointer;
 }
 
 .project-image {
@@ -159,8 +160,7 @@ body {
 }
 
 .project-item:hover .project-content {
-    color: var(--color-text);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    color: var(--color-bg);
 }
 
 /* Hover Reveal */
