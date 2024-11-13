@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <!-- CSS Dependencies -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header"></div>
+
+    <div class="viewport">
+        <div class="smooth-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1 class="hero-title">
+                    <span>Creative</span>
+                    <span>Developer</span>
+                    <span>Portfolio</span>
+                </h1>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="projects-section">
+
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">ALL WORK</button>
+                    <button class="filter-btn" data-filter="development">DEVELOPMENT</button>
+                    <button class="filter-btn" data-filter="design">DESIGN</button>
+                    <button class="filter-btn" data-filter="branding">BRANDING</button>
+                </div>
+
+                <div class="project-grid">
+                    <!-- Project Item -->
+                    <article class="project-item" data-hover="images/mockup-test.webp">
+                        <div class="project-content">
+                            <h2 class="project-title">Project Name</h2>
+                            <span class="project-category">Category</span>
+                        </div>
+                        <div class="project-image">
+                            <img src="/images/mockup-test.webp" alt="Project Name">
+                        </div>
+                    </article>
+                    <!-- Repeat project items -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

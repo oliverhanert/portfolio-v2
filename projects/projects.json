@@ -1,0 +1,26 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "E-commerce Platform",
+            "brief": "A full-stack e-commerce solution built with modern technologies",
+            "thumbnail": "/api/placeholder/400/300",
+            "category": "professional",
+            "date": "2024",
+            "techStack": ["React", "Node.js", "MongoDB", "AWS"],
+            "projectUrl": "google.com",
+            "relatedProjects": [2, 3]
+        },
+        {
+            "id": 2,
+            "title": "Machine Learning Model",
+            "brief": "Predictive analysis system for data processing",
+            "thumbnail": "/api/placeholder/400/300",
+            "category": "university",
+            "date": "2023",
+            "techStack": ["Python", "TensorFlow", "scikit-learn"],
+            "projectUrl": "#",
+            "relatedProjects": [1, 3]
+        }
+    ]
+}
