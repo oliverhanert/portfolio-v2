@@ -2,24 +2,39 @@
     "projects": [
         {
             "id": "project-1",
-            "title": "E-commerce Platform",
+            "title": "New Website - DTU Science Park",
             "category": "development",
             "description": "Modern e-commerce solution built with React and Node.js",
-            "thumbnail": "/projects/content/project-1/images/mockup-test.webp",
+            "thumbnail": "/projects/content/project-1/images/portfolio-dtu-hero-2024.jpeg",
             "images": [
-                "/projects/content/project-1/images/mockup-test.webp",
-                "/projects/content/project-1/images/mockup-test.webp",
-                "/projects/content/project-1/images/mockup-test.webp"
+                "/projects/content/project-1/images/portfolio-dtu-hero-2024.jpeg",
+                "/projects/content/project-1/images/portfolio-dtu-hero-2024.jpeg",
+                "/projects/content/project-1/images/portfolio-dtu-hero-2024.jpeg"
             ],
-            "technologies": ["React", "Node.js", "MongoDB"],
-            "year": "2024",
-            "client": "Company Name",
-            "link": "https://project-url.com",
+            "technologies": ["WordPress", "JavaScript", "Figma"],
+            "year": "2023",
+            "client": "DTU Science Park",
+            "link": "https://dtusciencepark.dk",
             "featured": true
         },
         {
             "id": "project-2",
             "title": "Brand Identity",
+            "category": "design",
+            "description": "Complete brand identity design for a tech startup",
+            "thumbnail": "/projects/content/project-2/images/thumbnail.jpg",
+            "images": [
+                "/projects/content/project-2/images/main.jpg",
+                "/projects/content/project-2/images/detail-1.jpg"
+            ],
+            "technologies": ["Figma", "Photoshop", "Illustrator"],
+            "year": "2023",
+            "client": "Startup Name",
+            "featured": true
+        },
+        {
+            "id": "project-3",
+            "title": "Brand",
             "category": "design",
             "description": "Complete brand identity design for a tech startup",
             "thumbnail": "/projects/content/project-2/images/thumbnail.jpg",
