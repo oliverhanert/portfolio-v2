@@ -111,11 +111,12 @@ body {
 }
 
 .logo {
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 1.25rem;
-    font-weight: 400;
     z-index: 1001;
+}
+
+.logo img {
+    filter: invert(1);
+    width: 70px;
 }
 
 .menu-toggle {
@@ -153,7 +154,7 @@ body {
 .hero-title {
     font-size: var(--huge-text);
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.1;
     margin: 0;
 }
 
@@ -342,5 +343,9 @@ body {
 
     .hero {
         padding: 0 1rem;
+    }
+
+    .logo img {
+        width: 40px;
     }
 }
