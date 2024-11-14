@@ -2,14 +2,12 @@
     "projects": [
         {
             "id": "project-1",
-            "title": "New Website - DTU Science Park",
+            "title": "DTU Science Park",
             "category": "development",
             "description": "Modern e-commerce solution built with React and Node.js",
-            "thumbnail": "/projects/content/project-1/images/portfolio-dtu-hero-2024.jpeg",
+            "thumbnail": "/projects/content/project-1/images/dtu-thumb.jpg",
             "images": [
-                "/projects/content/project-1/images/portfolio-dtu-hero-2024.jpeg",
-                "/projects/content/project-1/images/portfolio-dtu-hero-2024.jpeg",
-                "/projects/content/project-1/images/portfolio-dtu-hero-2024.jpeg"
+                "/projects/content/project-1/images/hero.jpg"
             ],
             "technologies": ["WordPress", "JavaScript", "Figma"],
             "year": "2023",
@@ -19,25 +17,25 @@
         },
         {
             "id": "project-2",
-            "title": "Brand Identity",
-            "category": "design",
+            "title": "Enhedslisten",
+            "category": "development",
             "description": "Complete brand identity design for a tech startup",
-            "thumbnail": "/projects/content/project-2/images/thumbnail.jpg",
+            "thumbnail": "/projects/content/project-2/images/enhedslisten-thumb.jpg",
             "images": [
                 "/projects/content/project-2/images/main.jpg",
                 "/projects/content/project-2/images/detail-1.jpg"
             ],
             "technologies": ["Figma", "Photoshop", "Illustrator"],
-            "year": "2023",
-            "client": "Startup Name",
+            "year": "2024",
+            "client": "Enhedslisten",
             "featured": true
         },
         {
             "id": "project-3",
-            "title": "Brand",
-            "category": "design",
+            "title": "FM Fanatics",
+            "category": "hobby projects",
             "description": "Complete brand identity design for a tech startup",
-            "thumbnail": "/projects/content/project-2/images/thumbnail.jpg",
+            "thumbnail": "/projects/content/project-3/images/fmfanatics-thumb.jpg",
             "images": [
                 "/projects/content/project-2/images/main.jpg",
                 "/projects/content/project-2/images/detail-1.jpg"

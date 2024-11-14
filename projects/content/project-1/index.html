@@ -4,54 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Title - Your Portfolio</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/menu.css">
+    <link href="../../../css/style.css" rel="stylesheet">
+    <link href="../../../css/menu.css" rel="stylesheet">
+    <link href="../../../css/project-detail.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" rel="stylesheet">
 </head>
 <body class="project-detail">
     <div id="header"></div>
 
-    <main class="project-content">
-        <header class="project-header">
-            <div class="project-info">
-                <h1 class="project-title">E-commerce Platform</h1>
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="hero-background">
+            <img src="images/hero.jpg" alt="Project Title">
+        </div>
+        <div class="hero-content">
+            <div class="hero-header">
+                <h1 class="project-title">New website for DTU Science Park</h1>
+            </div>
+            <div class="hero-footer">
+                <div class="project-brief">
+                    <p>Project brief description</p>
+                </div>
                 <div class="project-meta">
-                    <span class="project-year">2024</span>
-                    <span class="project-category">Development</span>
+                    <div class="meta-item">
+                        <span class="value">Development</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="value">2024</span>
+                    </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <section class="project-images">
-            <!-- Images will be loaded dynamically -->
-        </section>
-
-        <section class="project-description">
-            <div class="project-text">
-                <p>Detailed project description goes here...</p>
-            </div>
-            
-            <div class="project-details">
-                <div class="detail-block">
-                    <h3>Client</h3>
-                    <p>Company Name</p>
-                </div>
-                <div class="detail-block">
-                    <h3>Technologies</h3>
-                    <ul>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>MongoDB</li>
-                    </ul>
-                </div>
-                <div class="detail-block">
-                    <h3>Visit</h3>
-                    <a href="#" class="project-link">View Live Site →</a>
+    <!-- Project Content -->
+    <main class="project-content">
+        <!-- Introduction Section -->
+        <section class="content-section text-section" data-aos="fade-up">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Project Overview</h2>
+                        <p>Detailed description of the project goes here. This can be a longer text explaining the context, challenges, and solutions.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Full Width Image -->
+        <section class="content-section image-section full-width" data-aos="fade-up">
+            <img src="images/hero.jpg" alt="Project Image">
+        </section>
+
+        <!-- Two Column Text -->
+        <section class="content-section text-section" data-aos="fade-up">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="two-columns">
+                            <div class="column">
+                                <h3>The Challenge</h3>
+                                <p>Description of the challenges faced during the project.</p>
+                            </div>
+                            <div class="column">
+                                <h3>The Solution</h3>
+                                <p>Explanation of how the challenges were addressed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features List -->
+        <section class="content-section list-section" data-aos="fade-up">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Key Features</h2>
+                        <ul class="feature-list">
+                            <li data-aos="fade-up" data-aos-delay="100">Feature one with detailed explanation</li>
+                            <li data-aos="fade-up" data-aos-delay="200">Feature two with detailed explanation</li>
+                            <li data-aos="fade-up" data-aos-delay="300">Feature three with detailed explanation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="content-section image-grid-section" data-aos="fade-up">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="image-grid">
+                            <div class="grid-item" data-aos="fade-up">
+                                <img src="images/hero.jpg" alt="Project Detail">
+                            </div>
+                            <div class="grid-item" data-aos="fade-up" data-aos-delay="100">
+                                <img src="images/hero.jpg" alt="Project Detail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <div id="footer"></div>
-    <script type="module" src="/js/main.js"></script>
+
+<!-- These should be in this exact order -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+<script type="module" src="../../../js/main.js"></script>
+    
 </body>
 </html>

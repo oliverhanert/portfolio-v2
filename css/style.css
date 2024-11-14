@@ -100,28 +100,16 @@ body {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    position: relative;
 }
 
 .project-item {
     position: relative;
     padding-top: 100%; /* 1:1 Aspect Ratio */
-    background: var(--color-muted);
+    background: var(--color-bg);
     overflow: hidden;
-}
-
-.project-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem;
-    z-index: 2;
     cursor: pointer;
 }
 
@@ -131,55 +119,61 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: all 0.5s ease;
+    filter: grayscale(100%);
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+}
+
+/* Global Hover Content */
+.project-hover-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 .project-title {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
+    color: var(--color-text);
+    line-height: 1;
 }
 
 .project-category {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     font-weight: 500;
     text-transform: uppercase;
+    color: var(--color-text);
+    margin-top: 1rem;
 }
 
-/* Project hover effects */
+/* Hover States */
 .project-item:hover .project-image {
+    filter: grayscale(0%);
+}
+
+.project-grid.item-hovered .project-item:not(:hover) .project-image {
+    opacity: 0.2;
+}
+
+/* Show hover content when item is hovered */
+.project-grid.item-hovered .project-hover-content {
     opacity: 1;
-}
-
-.project-item:hover .project-content {
-    color: var(--color-bg);
-}
-
-/* Hover Reveal */
-.hover-reveal {
-    position: fixed;
-    width: 300px;
-    height: 400px;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: all 0.5s ease;
-    z-index: 999;
-}
-
-.hover-reveal.active {
-    opacity: 1;
-    transform: scale(1);
+    visibility: visible;
 }
 
 /* Project Filters */
@@ -219,6 +213,22 @@ body {
     width: calc(100% - 4rem);
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 2rem 1rem;
+    }
+    
+    .project-title {
+        font-size: clamp(2rem, 6vw, 4rem);
+    }
+
+    .filter-btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -253,18 +263,5 @@ body {
 
     .hero {
         padding: 0 1rem;
-    }
-
-    .projects-section {
-        padding: 2rem 1rem;
-    }
-
-    .project-content {
-        padding: 1rem;
-    }
-
-    .filter-btn {
-        font-size: 1.2rem;
-        padding: 0.8rem 1.5rem;
     }
 }

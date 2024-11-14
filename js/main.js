@@ -67,26 +67,56 @@ class ProjectManager {
     async renderProjectGrid() {
         const gridContainer = document.querySelector('.project-grid');
         if (!gridContainer) return;
-
+    
         const projects = await this.loadProjects();
         const filteredProjects = this.currentFilter === 'all' 
             ? projects 
             : projects.filter(p => p.category === this.currentFilter);
-
+    
+        // Create the hover content container (will be reused for all projects)
+        const hoverContent = document.createElement('div');
+        hoverContent.className = 'project-hover-content';
+        
         const html = filteredProjects.map(project => `
-            <article class="project-item ${project.category}" data-project-id="${project.id}">
-                <div class="project-content">
-                    <h2 class="project-title">${project.title}</h2>
-                    <span class="project-category">${project.category}</span>
-                </div>
+            <article class="project-item ${project.category}" data-project-id="${project.id}"
+                     data-title="${project.title}" 
+                     data-category="${project.category}">
                 <div class="project-image">
                     <img src="${project.thumbnail}" alt="${project.title}" loading="lazy">
                 </div>
             </article>
         `).join('');
-
+    
         gridContainer.innerHTML = html;
-        this.initializeProjectLinks();
+        gridContainer.appendChild(hoverContent);
+        this.initializeProjectHovers();
+    }
+
+    initializeProjectHovers() {
+        const projectGrid = document.querySelector('.project-grid');
+        const projects = document.querySelectorAll('.project-item');
+        const hoverContent = document.querySelector('.project-hover-content');
+    
+        projects.forEach(project => {
+            project.addEventListener('mouseenter', () => {
+                projectGrid.classList.add('item-hovered');
+                
+                // Update hover content
+                hoverContent.innerHTML = `
+                    <h2 class="project-title">${project.dataset.title}</h2>
+                    <span class="project-category">${project.dataset.category}</span>
+                `;
+            });
+    
+            project.addEventListener('mouseleave', () => {
+                projectGrid.classList.remove('item-hovered');
+            });
+    
+            project.addEventListener('click', () => {
+                const projectId = project.dataset.projectId;
+                window.location.href = `/projects/content/${projectId}`;
+            });
+        });
     }
 
     initializeProjectLinks() {
@@ -170,11 +200,14 @@ class PortfolioApp {
             
             // Initialize page-specific functionality
             const path = window.location.pathname;
+            console.log('Current path:', path);
+
             if (path.endsWith('/') || path.endsWith('/index.html')) {
                 await this.initHomePage();
-            } else if (path.endsWith('/projects.html')) {  // Add this condition
+            } else if (path.endsWith('/projects.html')) {
                 await this.initProjectsPage();
-            } else if (path.includes('project.html')) {
+            } else if (path.includes('/projects/content/')) { // Updated condition for project detail pages
+                console.log('Project detail page detected');
                 await this.initProjectPage();
             }
 
@@ -184,25 +217,43 @@ class PortfolioApp {
         }
     }
 
-    // Add this new method
-    async initProjectsPage() {
-        console.log('Initializing projects page...');
-        // Initialize projects grid and filters
-        await this.projectManager.renderProjectGrid();
-        this.projectManager.initializeFilters();
-    }
-
-    // Rest of your PortfolioApp methods remain the same
     async loadCommonComponents() {
         try {
+            const basePath = this.getBasePath();
             await Promise.all([
-                ComponentLoader.loadComponent('header', './components/header.html'),
-                ComponentLoader.loadComponent('footer', './components/footer.html')
+                ComponentLoader.loadComponent('header', `${basePath}/components/header.html`),
+                ComponentLoader.loadComponent('footer', `${basePath}/components/footer.html`)
             ]);
         } catch (error) {
             console.error('Error loading components:', error);
         }
     }
+
+    // Helper method to get the correct base path
+    getBasePath() {
+        const path = window.location.pathname;
+        if (path.includes('/projects/content/')) {
+            return '../../..'; // Go up three levels from project detail pages
+        }
+        return '.'; // Default for root level pages
+    }
+
+    async initProjectPage() {
+        console.log('Initializing project detail page');
+        
+        // Initialize parallax effect
+        const heroBackground = document.querySelector('.hero-background');
+        if (heroBackground) {
+            heroBackground.setAttribute('data-parallax', '0.5');
+            this.initParallax();
+        }
+
+        // Initialize slider if present
+        if (document.querySelector('.project-slider')) {
+            this.initProjectSlider();
+        }
+    }
+
 
     async initHomePage() {
         // Initialize projects grid and filters
@@ -232,6 +283,7 @@ class PortfolioApp {
         });
     }
 }
+
 
 
 // Initialize the application
