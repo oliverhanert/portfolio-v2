@@ -71,21 +71,38 @@ class ProjectManager {
         const projects = await this.loadProjects();
         const filteredProjects = this.currentFilter === 'all' 
             ? projects 
-            : projects.filter(p => p.category === this.currentFilter);
+            : projects.filter(p => {
+                // Handle both string and array categories
+                const categories = Array.isArray(p.category) ? p.category : [p.category];
+                return categories.includes(this.currentFilter);
+            });
     
-        // Create the hover content container (will be reused for all projects)
+        // Create the hover content container
         const hoverContent = document.createElement('div');
         hoverContent.className = 'project-hover-content';
         
-        const html = filteredProjects.map(project => `
-            <article class="project-item ${project.category}" data-project-id="${project.id}"
-                     data-title="${project.title}" 
-                     data-category="${project.category}">
-                <div class="project-image">
-                    <img src="${project.thumbnail}" alt="${project.title}" loading="lazy">
-                </div>
-            </article>
-        `).join('');
+        const html = filteredProjects.map(project => {
+            // Convert category to string for data attribute
+            const categoryString = Array.isArray(project.category) 
+                ? project.category.join(', ') 
+                : project.category;
+    
+            // Add all categories as classes for filtering
+            const categoryClasses = Array.isArray(project.category)
+                ? project.category.join(' ')
+                : project.category;
+    
+            return `
+                <article class="project-item ${categoryClasses}" 
+                         data-project-id="${project.id}"
+                         data-title="${project.title}" 
+                         data-category="${categoryString}">
+                    <div class="project-image">
+                        <img src="${project.thumbnail}" alt="${project.title}" loading="lazy">
+                    </div>
+                </article>
+            `;
+        }).join('');
     
         gridContainer.innerHTML = html;
         gridContainer.appendChild(hoverContent);
@@ -101,7 +118,7 @@ class ProjectManager {
             project.addEventListener('mouseenter', () => {
                 projectGrid.classList.add('item-hovered');
                 
-                // Update hover content
+                // No need to split and join if it's already formatted in the data attribute
                 hoverContent.innerHTML = `
                     <h2 class="project-title">${project.dataset.title}</h2>
                     <span class="project-category">${project.dataset.category}</span>
@@ -205,8 +222,9 @@ class PortfolioApp {
             if (path.endsWith('/') || path.endsWith('/index.html')) {
                 await this.initHomePage();
             } else if (path.endsWith('/projects.html')) {
+                console.log('Projects page detected');
                 await this.initProjectsPage();
-            } else if (path.includes('/projects/content/')) { // Updated condition for project detail pages
+            } else if (path.includes('/projects/content/')) {
                 console.log('Project detail page detected');
                 await this.initProjectPage();
             }
@@ -238,25 +256,16 @@ class PortfolioApp {
         return '.'; // Default for root level pages
     }
 
-    async initProjectPage() {
-        console.log('Initializing project detail page');
-        
-        // Initialize parallax effect
-        const heroBackground = document.querySelector('.hero-background');
-        if (heroBackground) {
-            heroBackground.setAttribute('data-parallax', '0.5');
-            this.initParallax();
-        }
-
-        // Initialize slider if present
-        if (document.querySelector('.project-slider')) {
-            this.initProjectSlider();
-        }
-    }
-
 
     async initHomePage() {
         // Initialize projects grid and filters
+        await this.projectManager.renderProjectGrid();
+        this.projectManager.initializeFilters();
+    }
+
+    async initProjectsPage() {
+        console.log('Initializing projects page...');
+        // Use the same functionality as homepage for projects
         await this.projectManager.renderProjectGrid();
         this.projectManager.initializeFilters();
     }
@@ -269,18 +278,6 @@ class PortfolioApp {
                 once: true
             });
         }
-
-        // Add scroll class to header
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (navbar) {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            }
-        });
     }
 }
 

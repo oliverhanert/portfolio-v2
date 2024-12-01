@@ -3,8 +3,8 @@
         {
             "id": "project-1",
             "title": "DTU Science Park",
-            "category": "development",
-            "description": "Modern e-commerce solution built with React and Node.js",
+            "category": "websites",
+            "description": "...",
             "thumbnail": "/projects/content/project-1/images/dtu-thumb.jpg",
             "images": [
                 "/projects/content/project-1/images/hero.jpg"
@@ -18,8 +18,8 @@
         {
             "id": "project-2",
             "title": "Enhedslisten",
-            "category": "development",
-            "description": "Complete brand identity design for a tech startup",
+            "category": "websites",
+            "description": "...",
             "thumbnail": "/projects/content/project-2/images/enhedslisten-thumb.jpg",
             "images": [
                 "/projects/content/project-2/images/main.jpg",
@@ -34,7 +34,22 @@
             "id": "project-3",
             "title": "FM Fanatics",
             "category": "hobby projects",
-            "description": "Complete brand identity design for a tech startup",
+            "description": "...",
+            "thumbnail": "/projects/content/project-3/images/fmfanatics-thumb.jpg",
+            "images": [
+                "/projects/content/project-2/images/main.jpg",
+                "/projects/content/project-2/images/detail-1.jpg"
+            ],
+            "technologies": ["Figma", "Photoshop", "Illustrator"],
+            "year": "2023",
+            "client": "Startup Name",
+            "featured": true
+        },
+        {
+            "id": "project-4",
+            "title": "Mary Fonden",
+            "category": ["websites", "design"],
+            "description": "...",
             "thumbnail": "/projects/content/project-3/images/fmfanatics-thumb.jpg",
             "images": [
                 "/projects/content/project-2/images/main.jpg",

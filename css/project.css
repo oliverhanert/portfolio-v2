@@ -1,14 +1,13 @@
 /* Page Hero Section */
 .page-hero {
-    min-height: 60vh;
     display: flex;
     align-items: center;
-    padding: 8rem 2rem 4rem;
+    padding: 8rem 2rem 2rem;
     background-color: var(--color-bg);
 }
 
 .page-title {
-    font-size: clamp(3rem, 10vw, 8rem);
+    font-size: var(--huge-text);
     font-weight: 800;
     line-height: 1;
     margin-bottom: 2rem;
@@ -18,8 +17,6 @@
 }
 
 .page-description {
-    font-size: clamp(1.125rem, 2vw, 1.5rem);
-    color: var(--color-muted);
     max-width: 600px;
     opacity: 0;
     transform: translateY(30px);
@@ -32,8 +29,8 @@
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 550px) {
     .page-hero {
-        padding: 6rem 1rem 3rem;
+        padding: 6rem 1rem 2rem;
     }
 }

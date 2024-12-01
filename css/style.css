@@ -1,5 +1,5 @@
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@100;200;300;400;500;600;700;800&display=swap');
 
 /* Subjectivity font */
 @font-face {
@@ -69,7 +69,7 @@
 
 :root {
     /* Color Scheme */
-    --color-bg: #0a0a0a;
+    --color-bg: #181818;
     --color-text: #ffffff;
     --color-primary: #00ff95;
     --color-secondary: #ff3366;
@@ -77,37 +77,55 @@
     --color-muted: rgba(255, 255, 255, 0.7);
     
     /* Typography */
-    --font-main: 'Subjectivity', sans-serif;
+    /*: 'Subjectivity', sans-serif;*/
     --font-secondary: 'Archivo', sans-serif;
-    --huge-text: clamp(3rem, 15vw, 12rem);
+    --huge-text: clamp(3rem, 15vw, 8rem);
+    --standard-text: clamp(1rem, 2vw, 1.1rem);
+    --medium-text: clamp(1rem, 3vw, 1.2rem)
 }
 
 /* Base Styles */
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: var(--font-main) !important;
     font-weight: 400;
     line-height: 1;
     margin: 0;
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-secondary);
+}
+
+p {
+    font-family: var(--font-secondary);
+    font-size: var(--standard-text);
+    line-height: calc(var(--standard-text)*1.6)
+}
+
+a, button {
+    transition: all 0.3s ease;
+}
+
 /* Header Styles */
 .site-header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 2rem;
+    padding: 1rem 2rem;
 }
 
 .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
 }
 
 .logo {
@@ -124,10 +142,14 @@ body {
     border: none;
     color: var(--color-text);
     font-size: 1rem;
-    font-family: var(--font-main);
+    font-family: var(--font-secondary);
     cursor: pointer;
     padding: 0;
     z-index: 1001;
+}
+
+.menu-toggle:hover {
+    color: var(--color-primary);
 }
 
 /* Frontpage hero */
@@ -139,7 +161,9 @@ body {
     width: auto;
     position: absolute;
     z-index: -1;
-    aspect-ratio: 1 / 3;
+    aspect-ratio: 5 / 7;
+    object-position: left;
+    border-radius: 10px;
 }
 
 /* Hero Section */
@@ -151,14 +175,19 @@ body {
     padding: 0 2rem;
 }
 
-.hero-title {
+.hero-title span {
     font-size: var(--huge-text);
     font-weight: 800;
     line-height: 1.1;
     margin: 0;
+    width: 60%;
 }
 
-.hero-title span {
+.hero-title p {
+    margin-left: 10px;
+}
+
+.hero-title span, .hero-title p {
     display: block;
     opacity: 0;
     transform: translateY(30px);
@@ -173,9 +202,94 @@ body {
     animation-delay: 0.4s;
 }
 
+/* Scroll down */
+.mouse-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 10;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.mouse-scroll:hover {
+    opacity: 1;
+}
+
+.mouse {
+    width: 26px;
+    height: 44px;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+}
+
+.scroll-indicator {
+    width: 2px;
+    height: 8px;
+    background-color: white;
+    border-radius: 1px;
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    animation: scroll 1.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, 6px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+/* Hero media queries */
+@media (max-width: 550px) {
+    .hero-frontpage-me {
+        height: 60vh;
+        right: 10%;
+        width: 80%;
+    }
+
+    .hero-title {
+        align-self: flex-end;
+    }
+
+    .mouse-scroll {
+        right: 20px;
+        bottom: 20px;
+        left: inherit;
+    }
+}
+
 /* Projects Section */
 .projects-section {
     padding: 4rem 2rem;
+}
+
+.section-title {
+    font-size: clamp(3rem, 8vw, 4rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.section-description {
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
 }
 
 .project-grid {
@@ -207,6 +321,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+
 }
 
 /* Global Hover Content */
@@ -227,7 +342,6 @@ body {
 .project-title {
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 700;
-    text-transform: uppercase;
     margin: 0;
     color: var(--color-text);
     line-height: 1;
@@ -262,14 +376,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: space-between;
+    background-color: #242525;
+    border-radius: 10px;
+    padding: 1rem;
 }
 
 .filter-btn {
     background: none;
     border: none;
     color: var(--color-text);
-    font-size: clamp(1rem, 3vw, 2rem);
-    font-family: var(--font-main);
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-family: var(--font-secondary);
     font-weight: 600;
     padding: 1rem 2rem;
     cursor: pointer;
@@ -296,7 +414,11 @@ body {
 /* Media Queries */
 @media (max-width: 768px) {
     .projects-section {
-        padding: 2rem 1rem;
+        padding: 5rem 1rem;
+    }
+
+    .project-filters {
+        flex-direction: column;
     }
     
     .project-title {
@@ -305,7 +427,21 @@ body {
 
     .filter-btn {
         font-size: 1.2rem;
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 0rem;
+        text-align: left;
+        width: max-content;
+    }
+
+    .filter-btn.active::after, .filter-btn:hover::after{
+        width: 105%;
+        left: 0;
+    }
+    .filter-btn::after {
+        left: 0;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -322,23 +458,12 @@ body {
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-    background: var(--color-bg);
-}
 
-::-webkit-scrollbar-thumb {
-    background: var(--color-text);
-}
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 550px) {
     .site-header {
         padding: 1rem;
-    }
-
-    .header-inner {
-        padding: 0 1rem;
     }
 
     .hero {
