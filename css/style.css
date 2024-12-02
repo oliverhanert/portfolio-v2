@@ -301,10 +301,12 @@ a, button {
 
 .project-item {
     position: relative;
-    padding-top: 100%; /* 1:1 Aspect Ratio */
     background: var(--color-bg);
     overflow: hidden;
     cursor: pointer;
+    width: 100%;
+    height: fit-content;
+    aspect-ratio: 16 / 9;
 }
 
 .project-image {
@@ -312,7 +314,7 @@ a, button {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     filter: grayscale(100%);
     transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -320,7 +322,7 @@ a, button {
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 
 }
 
@@ -376,7 +378,7 @@ a, button {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: #242525;
     border-radius: 10px;
     padding: 1rem;

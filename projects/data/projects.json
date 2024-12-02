@@ -3,9 +3,9 @@
         {
             "id": "project-1",
             "title": "DTU Science Park",
-            "category": "websites",
+            "category": "website",
             "description": "...",
-            "thumbnail": "/projects/content/project-1/images/dtu-thumb.jpg",
+            "thumbnail": "/projects/content/project-1/images/portfolio-1-thumb.jpg",
             "images": [
                 "/projects/content/project-1/images/hero.jpg"
             ],
@@ -18,7 +18,7 @@
         {
             "id": "project-2",
             "title": "Enhedslisten",
-            "category": "websites",
+            "category": "website",
             "description": "...",
             "thumbnail": "/projects/content/project-2/images/enhedslisten-thumb.jpg",
             "images": [
@@ -33,7 +33,7 @@
         {
             "id": "project-3",
             "title": "FM Fanatics",
-            "category": "hobby projects",
+            "category": "fritidsprojekt",
             "description": "...",
             "thumbnail": "/projects/content/project-3/images/fmfanatics-thumb.jpg",
             "images": [
@@ -42,22 +42,52 @@
             ],
             "technologies": ["Figma", "Photoshop", "Illustrator"],
             "year": "2023",
-            "client": "Startup Name",
+            "client": "Eget projekt",
             "featured": true
         },
         {
             "id": "project-4",
             "title": "Mary Fonden",
-            "category": ["websites", "design"],
+            "category": ["website", "design"],
             "description": "...",
-            "thumbnail": "/projects/content/project-3/images/fmfanatics-thumb.jpg",
+            "thumbnail": "/projects/content/project-4/images/aftryk-thumb.jpg",
             "images": [
                 "/projects/content/project-2/images/main.jpg",
                 "/projects/content/project-2/images/detail-1.jpg"
             ],
             "technologies": ["Figma", "Photoshop", "Illustrator"],
             "year": "2023",
-            "client": "Startup Name",
+            "client": "Mary Fonden",
+            "featured": true
+        },
+        {
+            "id": "project-5",
+            "title": "Naturvejledning Danmark",
+            "category": "website",
+            "description": "...",
+            "thumbnail": "/projects/content/project-5/images/naturvejledning-thumb.jpg",
+            "images": [
+                "/projects/content/project-2/images/main.jpg",
+                "/projects/content/project-2/images/detail-1.jpg"
+            ],
+            "technologies": ["Figma", "Photoshop", "Illustrator"],
+            "year": "2023",
+            "client": "Naturvejledning Danmark",
+            "featured": true
+        },
+        {
+            "id": "project-6",
+            "title": "Holdet.dk",
+            "category": ["website", "marketing", "design"],
+            "description": "...",
+            "thumbnail": "/projects/content/project-6/images/holdet-thumb.jpg",
+            "images": [
+                "/projects/content/project-2/images/main.jpg",
+                "/projects/content/project-2/images/detail-1.jpg"
+            ],
+            "technologies": ["Figma", "Photoshop", "Illustrator"],
+            "year": "2022-2023",
+            "client": "Holdet.dk",
             "featured": true
         }
     ]
