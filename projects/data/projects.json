@@ -5,7 +5,7 @@
             "title": "DTU Science Park",
             "category": "website",
             "description": "...",
-            "thumbnail": "/projects/content/project-1/images/portfolio-1-thumb.jpg",
+            "thumbnail": "/projects/content/project-1/images/portfolio-1-thumb.webp",
             "images": [
                 "/projects/content/project-1/images/hero.jpg"
             ],
@@ -20,7 +20,7 @@
             "title": "Enhedslisten",
             "category": "website",
             "description": "...",
-            "thumbnail": "/projects/content/project-2/images/enhedslisten-thumb.jpg",
+            "thumbnail": "/projects/content/project-2/images/enhedslisten-thumb.webp",
             "images": [
                 "/projects/content/project-2/images/main.jpg",
                 "/projects/content/project-2/images/detail-1.jpg"
@@ -35,7 +35,7 @@
             "title": "FM Fanatics",
             "category": "fritidsprojekt",
             "description": "...",
-            "thumbnail": "/projects/content/project-3/images/fmfanatics-thumb.jpg",
+            "thumbnail": "/projects/content/project-3/images/fmfanatics-thumb.webp",
             "images": [
                 "/projects/content/project-2/images/main.jpg",
                 "/projects/content/project-2/images/detail-1.jpg"
@@ -50,7 +50,7 @@
             "title": "Mary Fonden",
             "category": ["website", "design"],
             "description": "...",
-            "thumbnail": "/projects/content/project-4/images/aftryk-thumb.jpg",
+            "thumbnail": "/projects/content/project-4/images/aftryk-thumb.webp",
             "images": [
                 "/projects/content/project-2/images/main.jpg",
                 "/projects/content/project-2/images/detail-1.jpg"
@@ -65,7 +65,7 @@
             "title": "Naturvejledning Danmark",
             "category": "website",
             "description": "...",
-            "thumbnail": "/projects/content/project-5/images/naturvejledning-thumb.jpg",
+            "thumbnail": "/projects/content/project-5/images/naturvejledning-thumb.webp",
             "images": [
                 "/projects/content/project-2/images/main.jpg",
                 "/projects/content/project-2/images/detail-1.jpg"
@@ -80,7 +80,7 @@
             "title": "Holdet.dk",
             "category": ["website", "marketing", "design"],
             "description": "...",
-            "thumbnail": "/projects/content/project-6/images/holdet-thumb.jpg",
+            "thumbnail": "/projects/content/project-6/images/holdet-thumb.webp",
             "images": [
                 "/projects/content/project-2/images/main.jpg",
                 "/projects/content/project-2/images/detail-1.jpg"
@@ -88,6 +88,36 @@
             "technologies": ["Figma", "Photoshop", "Illustrator"],
             "year": "2022-2023",
             "client": "Holdet.dk",
+            "featured": true
+        },
+        {
+            "id": "project-7",
+            "title": "Bjørn Parfume",
+            "category": ["website", "webshop", "design"],
+            "description": "...",
+            "thumbnail": "/projects/content/project-7/images/bjorn-thumb.webp",
+            "images": [
+                "/projects/content/project-2/images/main.jpg",
+                "/projects/content/project-2/images/detail-1.jpg"
+            ],
+            "technologies": ["Figma", "Photoshop", "Illustrator"],
+            "year": "2022-2023",
+            "client": "Holdet.dk",
+            "featured": true
+        },
+        {
+            "id": "project-8",
+            "title": "Skills4Reuse",
+            "category": "website",
+            "description": "...",
+            "thumbnail": "/projects/content/project-8/images/skills4reuse-thumb.webp",
+            "images": [
+                "/projects/content/project-2/images/main.jpg",
+                "/projects/content/project-2/images/detail-1.jpg"
+            ],
+            "technologies": ["Figma", "Photoshop", "Illustrator"],
+            "year": "2022-2023",
+            "client": "Norion",
             "featured": true
         }
     ]

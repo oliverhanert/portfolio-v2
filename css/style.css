@@ -306,7 +306,7 @@ a, button {
     cursor: pointer;
     width: 100%;
     height: fit-content;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 95 / 54;
 }
 
 .project-image {

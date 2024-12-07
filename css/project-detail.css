@@ -128,6 +128,13 @@
     color: #000;
 }
 
+.content-section.image-section img {
+    aspect-ratio: 16 / 13;
+    object-fit: cover;
+    width: 100%;
+    object-position: bottom;
+}
+
 .text-section h2 {
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 2rem;
