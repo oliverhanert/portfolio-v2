@@ -16,14 +16,17 @@
     --font-secondary: 'Archivo', sans-serif;
     --huge-text: clamp(3rem, 15vw, 8rem);
     --standard-text: clamp(0.9rem, 2vw, 0.9rem);
-    --medium-text: clamp(1rem, 3vw, 1.2rem)
+    --medium-text: clamp(1rem, 3vw, 1.2rem);
+
+    /* Speciel */
+    --line: #BBC1E1;
+    --line-active: #275EFE;
 }
 
 /* Base Styles */
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-weight: 400;
     line-height: 1;
     margin: 0;
     overflow-x: hidden;
@@ -49,45 +52,8 @@ a, button {
     transition: all 0.3s ease;
 }
 
-/* Header Styles */
-.site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 1rem 2rem;
-}
 
-.header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.logo {
-    z-index: 1001;
-}
-
-.logo img {
-    filter: invert(1);
-    width: 70px;
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    color: var(--color-text);
-    font-size: 1rem;
-    font-family: var(--font-secondary);
-    cursor: pointer;
-    padding: 0;
-    z-index: 1001;
-}
-
-.menu-toggle:hover {
-    color: var(--color-primary);
-}
 
 /* Frontpage hero */
 .hero-frontpage-me {
@@ -407,9 +373,5 @@ a, button {
 
     .hero {
         padding: 0 1rem;
-    }
-
-    .logo img {
-        width: 40px;
     }
 }

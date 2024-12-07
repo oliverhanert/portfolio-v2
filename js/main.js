@@ -1,5 +1,4 @@
 import { ComponentLoader } from './loader.js';
-
 class MenuController {
     constructor() {
         setTimeout(() => {
@@ -11,6 +10,7 @@ class MenuController {
         this.menuButton = document.querySelector('.menu-toggle');
         this.menuOverlay = document.querySelector('.menu-overlay');
         this.closeBar = document.querySelector('.menu-close-bar');
+        this.header = document.querySelector('.site-header');
         this.isMenuOpen = false;
 
         if (this.menuButton && this.menuOverlay && this.closeBar) {
@@ -21,12 +21,30 @@ class MenuController {
     }
 
     addEventListeners() {
+        // Menu toggle
         this.menuButton.addEventListener('click', () => this.toggleMenu());
         this.closeBar.addEventListener('click', () => this.closeMenu());
         
+        // Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.isMenuOpen) {
                 this.closeMenu();
+            }
+        });
+
+        // Prevent scroll when menu is open
+        this.menuOverlay.addEventListener('wheel', (e) => {
+            if (this.isMenuOpen) {
+                e.preventDefault();
+            }
+        });
+
+        // Add scroll handler
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                this.header.classList.add('scrolled');
+            } else {
+                this.header.classList.remove('scrolled');
             }
         });
     }
@@ -34,7 +52,7 @@ class MenuController {
     toggleMenu() {
         this.isMenuOpen = !this.isMenuOpen;
         this.menuOverlay.classList.toggle('active');
-        this.menuButton.textContent = this.isMenuOpen ? 'MENU' : 'MENU';
+        this.menuButton.textContent = this.isMenuOpen ? 'LUK' : 'MENU';
         document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
     }
 
