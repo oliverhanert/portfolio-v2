@@ -1,6 +1,6 @@
 /* Project Detail Page Styles */
 .project-detail {
-    background-color: #F4F4EF;
+    background-color: #fff;
 }
 
 /* Hero Section */
@@ -113,26 +113,24 @@
     align-items: flex-end;
 }
 
-.hero-content span {
-    font-family: var(--font-secondary);
-    font-size: var(--standard-text);
-    line-height: 1.5rem;
+.hero-content .hero-footer .label {
+    font-weight: 100;
+    font-size: .7em;
+    line-height: 0;
+    text-transform: uppercase;
 }
 
 /* Content Sections */
+.project-content {
+    padding: 4rem 0;
+}
+
 .content-section {
-    margin: 8rem 0;
+    padding-bottom: 4rem;
 }
 
 .text-section {
     color: #000;
-}
-
-.content-section.image-section img {
-    aspect-ratio: 16 / 13;
-    object-fit: cover;
-    width: 100%;
-    object-position: bottom;
 }
 
 .text-section h2 {
@@ -158,6 +156,89 @@ p.manchet {
     font-size: calc(var(--standard-text)*1.1);
     font-weight: 500;
     line-height: calc(1.5rem * 1.1);
+}
+
+/* Client Box Styles */
+.client-box {
+    background-color: #f8f7f5; /* Light beige background */
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.client-box-content {
+    flex: 1;
+}
+
+.client-logo {
+    flex-shrink: 0;
+    width: 100px; /* Adjust based on your logo */
+}
+
+.client-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .client-box {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .client-logo {
+        width: 80px;
+        margin-top: 20px;
+    }
+}
+
+/* Feature Section with Background Image */
+.content-section.image-section.mockup-1 {
+    position: relative;
+    background-image: url('../projects/content/project-1/images/mockup-1.webp');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    color: white;
+    margin-top: -12rem;
+    z-index: -1;
+    background-color: #59838B;
+    padding: 20px;
+
+}
+
+.feature-content {
+    padding-top: 14rem;
+    padding-bottom: 6rem;
+    position: relative;
+    z-index: 2;
+    max-width: 60%;
+}
+
+.feature-block {
+    margin-bottom: 2rem;
+}
+
+.feature-block:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-section.image-section.mockup-1 {
+        background-attachment: scroll; /* Disable parallax on mobile */
+        padding: 60px 0;
+    }
+
+    .feature-block {
+        margin-bottom: 2rem;
+    }
 }
 
 /* Two Column Layout */
@@ -283,7 +364,7 @@ p.manchet {
         margin-top: auto;
         flex-direction: column;
         align-items: flex-start;
-        gap: 0rem;
+        gap: 1rem;
     }
 
     .two-columns {

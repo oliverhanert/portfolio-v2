@@ -1,70 +1,5 @@
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@100;200;300;400;500;600;700;800&display=swap');
-
-/* Subjectivity font */
-@font-face {
-    font-family: 'Subjectivity';
-    src: url('/fonts/Subjectivity/Subjectivity-Thin.woff2') format('woff2'),
-         url('/fonts/Subjectivity/Subjectivity-Thin.otf') format('oft');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Subjectivity';
-    src: url('/fonts/Subjectivity/Subjectivity-Light.woff2') format('woff2'),
-         url('/fonts/Subjectivity/Subjectivity-Light.otf') format('oft');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Subjectivity';
-    src: url('/fonts/Subjectivity/Subjectivity-Regular.woff2') format('woff2'),
-         url('/fonts/Subjectivity/Subjectivity-Regular.otf') format('oft');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Subjectivity';
-    src: url('/fonts/Subjectivity/Subjectivity-Medium.woff2') format('woff2'),
-         url('/fonts/Subjectivity/Subjectivity-Medium.otf') format('oft');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Subjectivity';
-    src: url('/fonts/Subjectivity/Subjectivity-Bold.woff2') format('woff2'),
-         url('/fonts/Subjectivity/Subjectivity-Bold.otf') format('oft');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Subjectivity';
-    src: url('/fonts/Subjectivity/Subjectivity-ExtraBold.woff2') format('woff2'),
-         url('/fonts/Subjectivity/Subjectivity-ExtraBold.otf') format('oft');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Subjectivity';
-    src: url('/fonts/Subjectivity/Subjectivity-Black.woff2') format('woff2'),
-         url('/fonts/Subjectivity/Subjectivity-Black.otf') format('oft');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Subjectivity';
-    src: url('/fonts/Subjectivity/Subjectivity-Super.woff2') format('woff2'),
-         url('/fonts/Subjectivity/Subjectivity-Super.otf') format('oft');
-    font-weight: 900;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 :root {
@@ -77,10 +12,10 @@
     --color-muted: rgba(255, 255, 255, 0.7);
     
     /* Typography */
-    /*: 'Subjectivity', sans-serif;*/
+    --font-test: 'Grotesk', sans-serif;
     --font-secondary: 'Archivo', sans-serif;
     --huge-text: clamp(3rem, 15vw, 8rem);
-    --standard-text: clamp(1rem, 2vw, 1.1rem);
+    --standard-text: clamp(0.9rem, 2vw, 0.9rem);
     --medium-text: clamp(1rem, 3vw, 1.2rem)
 }
 
@@ -100,12 +35,14 @@ html {
 
 h1, h2, h3, h4, h5 {
     font-family: var(--font-secondary);
+    font-weight: 700 !important;
 }
 
 p {
-    font-family: var(--font-secondary);
+    font-family: var(--font-test);
     font-size: var(--standard-text);
-    line-height: calc(var(--standard-text)*1.6)
+    line-height: calc(var(--standard-text)*1.6);
+    font-weight: 300;
 }
 
 a, button {
