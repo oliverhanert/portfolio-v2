@@ -1,6 +1,6 @@
 /* Project Detail Page Styles */
 .project-detail {
-    background-color: #fff;
+    background-color: #F2EDE7;
 }
 
 /* Hero Section */
@@ -181,13 +181,6 @@ p.manchet {
 
 .client-logo {
     flex-shrink: 0;
-    width: 120px; /* Adjust based on your logo */
-}
-
-.client-logo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
 }
 
 /* Responsive adjustments */
@@ -197,9 +190,6 @@ p.manchet {
         padding: 30px;
     }
 
-    .client-logo {
-        width: 60%;
-    }
 }
 
 /* Image section with no content */
@@ -259,19 +249,21 @@ body.enhedslisten-single .content-section.image-section.mockup-1 {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .content-section.image-section.mockup-1 {
-        background-size: 100%;
+@media (max-width: 900px) {
+    .content-section.image-section img.mockup-1 {
+        width: 90%;
     }
+}
 
+@media (max-width: 768px) {
     .feature-content {
         padding-bottom: 20rem;
     }
 }
 
 @media (max-width: 550px) {
-    .content-section.image-section.mockup-1 {
-        background-size: 140%;
+    .content-section.image-section img.mockup-1 {
+        width: 120%;
     }
 
     .feature-content {
@@ -352,6 +344,11 @@ body.enhedslisten-single .content-section.image-section.mockup-1 {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+}
+
+.text-and-image-section img {
+    object-fit: contain;
+    width: 100%;
 }
 
 /* Animations */

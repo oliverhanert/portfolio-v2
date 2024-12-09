@@ -6,7 +6,7 @@
     /* Color Scheme */
     --color-bg: #181818;
     --color-text: #ffffff;
-    --color-primary: #00ff95;
+    --color-primary: #FF7F47;
     --color-secondary: #ff3366;
     --color-accent: #6b77ff;
     --color-muted: rgba(255, 255, 255, 0.7);
@@ -52,6 +52,84 @@ a, button {
     transition: all 0.3s ease;
 }
 
+p a {
+    text-decoration: underline;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+p a:hover {
+    opacity: .8;
+}
+
+
+/* Hover effekter */
+.hover-link {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.hover-link::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(0);
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+    color: var(--color-text);
+}
+
+.hover-link::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+    color: var(--color-primary);
+}
+
+.hover-link span {
+    display: block;
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.7, 0, 0.2, 1); /* Added all to transition */
+    opacity: 1;
+}
+
+/* Hover states with transitions */
+.hover-link:hover span,
+.hover-link span {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.hover-link:hover span {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.hover-link::before,
+.hover-link:hover::before {
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.hover-link:hover::before {
+    transform: translateY(-100%);
+}
+
+.hover-link::after,
+.hover-link:hover::after {
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.hover-link:hover::after {
+    transform: translateY(0);
+}
 
 
 
