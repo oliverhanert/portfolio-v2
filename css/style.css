@@ -453,3 +453,30 @@ p a:hover {
         padding: 0 1rem;
     }
 }
+
+/* Fade up animation - global */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.fade-up[style*="animation-delay"] {
+    opacity: 0;
+}
+
+/* Ensure header and footer are visible */
+#header, #footer {
+    opacity: 1;
+    animation: none;
+}
