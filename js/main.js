@@ -300,7 +300,6 @@ class PortfolioApp {
 }
 
 
-
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
     new PortfolioApp();
