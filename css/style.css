@@ -474,9 +474,3 @@ p a:hover {
 .fade-up[style*="animation-delay"] {
     opacity: 0;
 }
-
-/* Ensure header and footer are visible */
-#header, #footer {
-    opacity: 1;
-    animation: none;
-}
