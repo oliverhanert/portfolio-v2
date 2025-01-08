@@ -1,4 +1,7 @@
 import { ComponentLoader } from './loader.js';
+import { loadHeader } from './components/header.js';
+import { loadFooter } from './components/footer.js';
+
 class MenuController {
     constructor() {
         setTimeout(() => {
@@ -293,12 +296,25 @@ class PortfolioApp {
         if (typeof AOS !== 'undefined') {
             AOS.init({
                 duration: 800,
-                once: true
+                once: true,
+                offset: 100
             });
         }
     }
 }
 
+// Load header and footer
+loadHeader();
+loadFooter();
+
+// Initialize AOS globally
+if (typeof AOS !== 'undefined') {
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+}
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
