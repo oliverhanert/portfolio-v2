@@ -165,12 +165,12 @@ export const projectContent: Record<Locale, Record<string, ProjectCopy>> = {
       imageAlt: "Profil Rejser homepage",
     },
     "004": {
-      title: "Danish Association of Construction Engineers",
+      title: "Konstruktørforeningen",
       tagline: "Website and membership platform for the engineering union.",
       story:
-        "The Danish Association of Construction Engineers needed a digital platform that communicates professional weight. Credible and serious, but not dusty.\n\nI built the front-end in React and TypeScript on Umbraco. The work covered membership flows, editorial templates and a component system that scales as the organisation publishes new content.\n\nThe goal was a site members actually want to use, and that editors can maintain without friction.",
+        "Konstruktørforeningen is the union for construction engineers and building engineers in Denmark. They needed a digital platform that communicates professional weight. Credible and serious, but not dusty.\n\nI built the front-end in React and TypeScript on Umbraco. The work covered membership flows, editorial templates and a component system that scales as the organisation publishes new content.\n\nThe goal was a site members actually want to use, and that editors can maintain without friction.",
       role: "Frontend developer",
-      imageAlt: "Danish Association of Construction Engineers homepage",
+      imageAlt: "Konstruktørforeningen homepage",
     },
     "005": {
       title: "Pulsen Gymnasium",
@@ -181,36 +181,36 @@ export const projectContent: Record<Locale, Record<string, ProjectCopy>> = {
       imageAlt: "Interior at Pulsen Gymnasium with graphics and atmosphere photography",
     },
     "007": {
-      title: "Danish Diabetes Association",
+      title: "Diabetes\u00ADforeningen",
       tagline: "New website with accessibility and a warm tone.",
       story:
-        "The Danish Diabetes Association needed a new website that makes health information understandable for everyone. From the newly diagnosed to relatives and healthcare professionals.\n\nI developed the front-end and UI with WCAG 2.1 AA as an integrated part of the work: contrast, keyboard navigation, semantic HTML and templates that work for all users. The visual expression had to feel warm and trustworthy, not clinical.\n\nA project where every choice matters, because the content meets people in all kinds of life situations.",
+        "Diabetesforeningen needed a new website that makes health information understandable for everyone. From the newly diagnosed to relatives and healthcare professionals.\n\nI developed the front-end and UI with WCAG 2.1 AA as an integrated part of the work: contrast, keyboard navigation, semantic HTML and templates that work for all users. The visual expression had to feel warm and trustworthy, not clinical.\n\nA project where every choice matters, because the content meets people in all kinds of life situations.",
       role: "Frontend developer & UI designer",
-      imageAlt: "Danish Diabetes Association homepage",
+      imageAlt: "Diabetesforeningen homepage",
     },
     "008": {
-      title: "Danish Rheumatism Association",
+      title: "Gigtforeningen",
       tagline: "Redesign for a patient organisation with a warm tone.",
       story:
-        "The Danish Rheumatism Association represents people with arthritis and rheumatic diseases. Their new site had to feel close and human, while still carrying the professional weight of a patient organisation.\n\nI built the front-end in React and TypeScript with a focus on clear navigation, recognisable templates and an expression that meets users where they are. Editors needed to publish articles, advice and campaigns without breaking the design.\n\nThe balance between professional and personal was the whole point.",
+        "Gigtforeningen represents people with arthritis and rheumatic diseases. Their new site had to feel close and human, while still carrying the professional weight of a patient organisation.\n\nI built the front-end in React and TypeScript with a focus on clear navigation, recognisable templates and an expression that meets users where they are. Editors needed to publish articles, advice and campaigns without breaking the design.\n\nThe balance between professional and personal was the whole point.",
       role: "Frontend developer",
-      imageAlt: "Danish Rheumatism Association homepage",
+      imageAlt: "Gigtforeningen homepage",
     },
     "009": {
-      title: "Danish Multiple Sclerosis Society",
+      title: "Scleroseforeningen",
       tagline: "Accessible platform for a broad audience.",
       story:
-        "The Danish Multiple Sclerosis Society supports people with MS and their relatives. The site has to work for a very broad audience, from the newly diagnosed in crisis to healthcare professionals who need to find documentation quickly.\n\nI developed the front-end with accessibility, clear information hierarchy and different entry points for members, volunteers and professionals. WCAG was a requirement from day one, not a checkbox at the end.\n\nStructure and care in every component choice.",
+        "Scleroseforeningen supports people with MS and their relatives. The site has to work for a very broad audience, from the newly diagnosed in crisis to healthcare professionals who need to find documentation quickly.\n\nI developed the front-end with accessibility, clear information hierarchy and different entry points for members, volunteers and professionals. WCAG was a requirement from day one, not a checkbox at the end.\n\nStructure and care in every component choice.",
       role: "Frontend developer",
-      imageAlt: "Danish Multiple Sclerosis Society homepage",
+      imageAlt: "Scleroseforeningen homepage",
     },
     "010": {
-      title: "AFTRYK · Mary Foundation",
+      title: "AFTRYK · Mary Fonden",
       tagline: "Campaign site presented at launch with Her Majesty The Queen.",
       story:
-        "Young people set high demands on themselves when they have to find their place in new communities. That was the starting point for AFTRYK, a campaign site I developed in collaboration with the Mary Foundation.\n\nThe solution is built in WordPress with Greenshift and GSAP. The site is made up of vector backgrounds and scroll-based animations that create a visual thread through the campaign. The project was presented at the launch event in November 2024.\n\nA project where design, animation and technical execution had to work together from the start.",
+        "Young people set high demands on themselves when they have to find their place in new communities. That was the starting point for AFTRYK, a campaign site I developed in collaboration with Mary Fonden.\n\nThe solution is built in WordPress with Greenshift and GSAP. The site is made up of vector backgrounds and scroll-based animations that create a visual thread through the campaign. The project was presented at the launch event in November 2024.\n\nA project where design, animation and technical execution had to work together from the start.",
       role: "Web developer",
-      imageAlt: "AFTRYK campaign site for the Mary Foundation",
+      imageAlt: "AFTRYK campaign site for Mary Fonden",
     },
     "011": {
       title: "Visit Greenland",

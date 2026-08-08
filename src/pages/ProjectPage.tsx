@@ -1,4 +1,4 @@
-import { useParams, useNavigate, Navigate } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { TopBar } from "@/components/TopBar";
 import { ProjectMeta } from "@/components/ProjectMeta";
@@ -8,6 +8,7 @@ import { NextProjectSection } from "@/components/NextProjectSection";
 import { StoryParagraphs, FadeUp } from "@/components/motion";
 import { heroImageUrl, useProjects } from "@/data/projects";
 import { useLanguage } from "@/i18n/context";
+import { NotFoundPage } from "@/pages/NotFoundPage";
 import { CREAM, INK } from "@/lib/constants";
 
 export function ProjectPage() {
@@ -19,7 +20,7 @@ export function ProjectPage() {
   const next = idx >= 0 ? projects[(idx + 1) % projects.length] : undefined;
   const { t } = useLanguage();
 
-  if (!project || !next) return <Navigate to="/" />;
+  if (!project || !next) return <NotFoundPage />;
 
   return (
     <motion.div

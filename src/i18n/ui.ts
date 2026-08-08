@@ -47,6 +47,13 @@ export const ui = {
       roleLine: "Frontend-udvikler · Peytz & Co. · København",
       downloadCv: "Download CV",
     },
+    notFound: {
+      code: "404",
+      title: "Siden findes ikke",
+      body: "Den her URL er vist løbet fra koden. Måske er den flyttet, måske har du tastet forkert. Måske er den i Funbox.",
+      home: "Til forsiden",
+      funbox: "Åbn Funbox",
+    },
     meta: {
       title: "Oliver Hanert · Frontend-udvikler & digital designer",
       description:
@@ -98,6 +105,13 @@ export const ui = {
       title: "Contact",
       roleLine: "Frontend developer · Peytz & Co. · Copenhagen",
       downloadCv: "Download CV",
+    },
+    notFound: {
+      code: "404",
+      title: "Page not found",
+      body: "This URL seems to have escaped the codebase. Maybe it moved, maybe you mistyped. Maybe it's in the Funbox.",
+      home: "Back home",
+      funbox: "Open Funbox",
     },
     meta: {
       title: "Oliver Hanert · Frontend developer & digital designer",

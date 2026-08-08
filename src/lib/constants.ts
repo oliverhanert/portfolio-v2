@@ -7,6 +7,7 @@ export const DARK = "#282018";
 export const FUNBOX_PINK = "#EC008C";
 
 export const SITE = {
+  url: "https://oliverhanert.dk",
   name: "Oliver Hanert",
   title: "Oliver Hanert · Frontend-udvikler & digital designer",
   description:

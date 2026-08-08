@@ -7,6 +7,7 @@ import { HomePage } from "@/pages/HomePage";
 import { ProjectPage } from "@/pages/ProjectPage";
 import { FunboxPage } from "@/pages/FunboxPage";
 import { ContactsPage } from "@/pages/ContactsPage";
+import { NotFoundPage } from "@/pages/NotFoundPage";
 
 function AppInner() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function AppInner() {
           <Route path="/contacts" element={<ContactsPage />} />
           <Route path="/funbox" element={<FunboxPage />} />
           <Route path="/projects/:id" element={<ProjectPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </AnimatePresence>
     </>
