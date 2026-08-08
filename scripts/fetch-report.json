@@ -1,0 +1,152 @@
+{
+  "heroes": {
+    "001": {
+      "ok": true,
+      "source": "https://dtusciencepark.com/wp-content/uploads/2026/06/DTU_Science_Park_CEO_15-768x512.webp",
+      "file": "001-hero.webp",
+      "bytes": 26630
+    },
+    "002": {
+      "ok": true,
+      "source": "https://images.folkeskolen.dk/cdn-cgi/image/width=412,height=520,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/https://www.folkeskolen.dk/wp-content/uploads/2026/05/05/forside-fs4.png",
+      "file": "002-hero.png",
+      "bytes": 1389919
+    },
+    "003": {
+      "ok": true,
+      "source": "https://www.profil-rejser.dk/wp-content/uploads/2025/10/desktop.00-00-00-00.still001.jpg?wsr",
+      "file": "003-hero.jpg",
+      "bytes": 302866
+    },
+    "004": {
+      "ok": true,
+      "source": "https://kf.wp.prod.combell.peytz.dk/wp-content/uploads/io-focal/925/fk-olga-truelsen-portraet-5-1440x810-fp50_40.jpg",
+      "file": "004-hero.jpg",
+      "bytes": 214233
+    },
+    "005": {
+      "error": "HTTP Error 454: ",
+      "url": "https://www.pulsen.dk"
+    },
+    "007": {
+      "ok": true,
+      "source": "https://diabetes.wp.prod.combell.peytz.dk/wp-content/uploads/io-focal/482/jens-hindborg-800x450-fp50_25.jpg",
+      "file": "007-hero.jpg",
+      "bytes": 205554
+    },
+    "008": {
+      "ok": true,
+      "source": "https://www.gigtforeningen.dk/wp-content/uploads/2025/12/naturforloeb-1920x810.jpg",
+      "file": "008-hero.jpg",
+      "bytes": 407195
+    },
+    "009": {
+      "ok": true,
+      "source": "https://www.scleroseforeningen.dk/wp-content/uploads/2026/05/indsamler-scleroseindsamlingen-2.jpg",
+      "file": "009-hero.jpg",
+      "bytes": 396754
+    },
+    "010": {
+      "ok": true,
+      "source": "https://aftryk.maryfonden.dk/wp-content/uploads/2026/04/Aftryk-MaryFonden_-nr.png",
+      "file": "010-hero.png",
+      "bytes": 84135
+    },
+    "011": {
+      "ok": true,
+      "source": "https://visitgreenland.com/wp-content/uploads/2024/08/the-waiter-taking-orders-from-guests-at-the-qooqqut-nuan-restaurant-in-the-fjord-near-nuuk-in-greenland-1-1400x933-1-768x512.jpg",
+      "file": "011-hero.jpg",
+      "bytes": 331336
+    },
+    "012": {
+      "error": "HTTP Error 403: Forbidden",
+      "url": "https://enhedslisten.dk"
+    },
+    "013": {
+      "ok": true,
+      "source": "https://www.ral.gl/wp-content/uploads/2025/09/Malik-Arctica-Qaanaaq-scaled.jpg",
+      "file": "013-hero.jpg",
+      "bytes": 251546
+    },
+    "014": {
+      "ok": true,
+      "source": "https://vaerdibyg.dk/wp-content/uploads/2025/05/Tagrenovering-11-1536x1024.webp",
+      "file": "014-hero.webp",
+      "bytes": 157128
+    }
+  },
+  "logos": {
+    "dtusciencepark": {
+      "error": "download failed",
+      "source": "https://dtusciencepark.com/wp-content/uploads/2023/06/dtu_logo_dark.svg"
+    },
+    "folkeskolen": {
+      "ok": true,
+      "source": "https://folkeskolen.dk/wp-content/uploads/2025/05/pressenaevnet.svg",
+      "file": "folkeskolen.svg",
+      "bytes": 43418
+    },
+    "profil-rejser": {
+      "ok": true,
+      "source": "https://www.profil-rejser.dk/wp-content/themes/profilrejser-theme/assets/dist/img/logo.svg",
+      "file": "profil-rejser.svg",
+      "bytes": 8250
+    },
+    "bellavista": {
+      "ok": true,
+      "source": "https://www.bellavista.dk/wp-content/uploads/sites/6/2025/12/bellavista-logo.svg",
+      "file": "bellavista.svg",
+      "bytes": 8242
+    },
+    "diabetes": {
+      "ok": true,
+      "source": "https://diabetes.wp.prod.combell.peytz.dk/wp-content/themes/diabetes/assets/dist/img/logo.svg",
+      "file": "diabetes.svg",
+      "bytes": 10072
+    },
+    "visitgreenland": {
+      "error": "download failed",
+      "source": "https://visitgreenland.com/wp-content/uploads/2025/02/vg-search-icon.svg"
+    },
+    "royalarcticline": {
+      "error": "download failed",
+      "source": "https://www.ral.gl/wp-content/uploads/2025/03/royal-artic-logo-white.svg"
+    },
+    "enhedslisten": {
+      "error": "download failed",
+      "source": "https://www.google.com/s2/favicons?domain=enhedslisten.dk&sz=128"
+    },
+    "vaerdibyg": {
+      "error": "download failed",
+      "source": "https://vaerdibyg.dk/wp-content/uploads/2025/01/vaerdibyg-logo.svg"
+    },
+    "maryfonden": {
+      "ok": true,
+      "source": "https://www.maryfonden.dk/wp-content/uploads/2024/02/MF-DK_DIGITAL-LOGO_RGB.svg",
+      "file": "maryfonden.svg",
+      "bytes": 11219
+    },
+    "kf": {
+      "error": "download failed",
+      "source": "https://kf.wp.prod.combell.peytz.dk/wp-content/themes/kf/assets/dist/img/logo.svg"
+    },
+    "gigtforeningen": {
+      "error": "download failed",
+      "source": "https://www.gigtforeningen.dk/wp-content/uploads/2026/03/forkaemper.svg"
+    },
+    "scleroseforeningen": {
+      "error": "download failed",
+      "source": "https://www.scleroseforeningen.dk/wp-content/uploads/2023/07/logo-simple.svg"
+    },
+    "pulsen": {
+      "error": "HTTP Error 454: ",
+      "url": "https://www.pulsen.dk"
+    },
+    "aftryk": {
+      "ok": true,
+      "source": "https://aftryk.maryfonden.dk/wp-content/uploads/2024/10/AFTRYK_LOGO_HVID.svg",
+      "file": "aftryk.svg",
+      "bytes": 17864
+    }
+  }
+}

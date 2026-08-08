@@ -1,0 +1,19 @@
+export const DISPLAY = "'Syne', sans-serif";
+export const BODY = "'DM Sans', sans-serif";
+export const MONO = "'DM Mono', monospace";
+export const INK = "#0e0e0e";
+export const CREAM = "#faf9f7";
+export const DARK = "#282018";
+export const FUNBOX_PINK = "#EC008C";
+
+export const SITE = {
+  name: "Oliver Hanert",
+  title: "Oliver Hanert · Frontend-udvikler & digital designer",
+  description:
+    "Portfolio for Oliver Hanert. Frontend-udvikler og digital designer i København. Websites, platforme og digitale produkter for organisationer og brands.",
+  email: "o.hanert@gmail.com",
+  phone: "+45 60810660",
+  linkedin: "https://linkedin.com/in/oliverhanert/",
+  location: "København, Danmark",
+  year: 2026,
+} as const;

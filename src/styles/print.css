@@ -1,0 +1,40 @@
+@media print {
+  @page {
+    margin: 1.4cm;
+    size: A4;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-cv-page {
+    background: #fff !important;
+    color: #111 !important;
+    min-height: auto !important;
+  }
+
+  .print-cv-page h1,
+  .print-cv-page span {
+    color: #111 !important;
+  }
+
+  .print-cv-page [style*="rgba(255,255,255"] {
+    color: #444 !important;
+  }
+
+  .print-cv-page [style*="border"] {
+    border-color: #ddd !important;
+  }
+
+  .md\:cursor-none {
+    cursor: auto !important;
+  }
+}
