@@ -47,10 +47,12 @@
 
 .client-marquee-logo img {
   filter: brightness(0);
+  shape-rendering: geometricPrecision;
 }
 
 .client-logo {
   filter: brightness(0);
+  shape-rendering: geometricPrecision;
 }
 
 .client-logo--light {

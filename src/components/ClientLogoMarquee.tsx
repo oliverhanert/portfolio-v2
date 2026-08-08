@@ -18,7 +18,7 @@ function MarqueeLogo({ client }: { client: Client }) {
         <img
           src={client.logo}
           alt=""
-          className="h-6 sm:h-7 w-auto max-w-[110px] object-contain"
+          className="h-6 sm:h-7 w-auto max-w-[140px] object-contain object-left"
           loading="lazy"
           onError={() => setImgFailed(true)}
         />

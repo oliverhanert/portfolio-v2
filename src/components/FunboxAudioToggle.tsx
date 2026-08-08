@@ -67,7 +67,7 @@ export function FunboxAudioToggle({ setMoodLabel, pauseLabel }: Props) {
 
       <motion.button
         type="button"
-        className="fixed z-50 flex flex-col items-center gap-2 border-none bg-transparent p-0"
+        className="fixed z-50 border-none bg-transparent p-0"
         style={{ cursor: "none" }}
         initial={false}
         animate={
@@ -79,7 +79,6 @@ export function FunboxAudioToggle({ setMoodLabel, pauseLabel }: Props) {
                 right: "auto",
                 x: 0,
                 y: 0,
-                scale: 1,
               }
             : {
                 left: "50%",
@@ -88,7 +87,6 @@ export function FunboxAudioToggle({ setMoodLabel, pauseLabel }: Props) {
                 right: "auto",
                 x: "-50%",
                 y: "-50%",
-                scale: 1,
               }
         }
         transition={{ type: "spring", damping: 24, stiffness: 220 }}
@@ -98,50 +96,57 @@ export function FunboxAudioToggle({ setMoodLabel, pauseLabel }: Props) {
         aria-pressed={playing}
         aria-label={playing ? pauseLabel : setMoodLabel}
       >
-        <motion.div
-          className="relative"
-          animate={
-            playing
-              ? { rotate: [-2, 2, -2], scale: [1, 1.03, 1] }
-              : isIntro
-                ? { y: [0, -6, 0] }
-                : { rotate: 0, scale: 1 }
-          }
-          transition={
-            playing
-              ? { duration: 0.45, repeat: Infinity, ease: "easeInOut" }
-              : isIntro
-                ? { duration: 2.8, repeat: Infinity, ease: "easeInOut" }
-                : { duration: 0.3 }
-          }
+        <div
+          className="flex flex-col items-center"
+          style={{
+            gap: docked ? 6 : 10,
+            width: docked ? "clamp(5rem, 14vw, 6.5rem)" : "clamp(11rem, 42vw, 18rem)",
+          }}
         >
-          <img
-            src={boombox}
-            alt=""
-            draggable={false}
-            className="block select-none pointer-events-none"
-            style={{
-              width: docked ? "clamp(5rem, 14vw, 6.5rem)" : "clamp(11rem, 42vw, 18rem)",
-              height: "auto",
-              filter: `drop-shadow(0 ${docked ? 8 : 20}px ${docked ? 20 : 40}px rgba(0,0,0,0.45))`,
-              transition: "width 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
-            }}
-          />
-        </motion.div>
-
-        {!playing && (
-          <span
-            style={{
-              fontFamily: MONO,
-              fontSize: docked ? 7 : 9,
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.55)",
-            }}
+          <motion.div
+            className="w-full flex justify-center"
+            animate={
+              playing
+                ? { rotate: [-2, 2, -2], scale: [1, 1.03, 1] }
+                : isIntro
+                  ? { y: [0, -6, 0] }
+                  : { rotate: 0, scale: 1, y: 0 }
+            }
+            transition={
+              playing
+                ? { duration: 0.45, repeat: Infinity, ease: "easeInOut" }
+                : isIntro
+                  ? { duration: 2.8, repeat: Infinity, ease: "easeInOut" }
+                  : { duration: 0.3 }
+            }
           >
-            {setMoodLabel}
-          </span>
-        )}
+            <img
+              src={boombox}
+              alt=""
+              draggable={false}
+              className="block w-full h-auto select-none pointer-events-none"
+              style={{
+                filter: `drop-shadow(0 ${docked ? 8 : 20}px ${docked ? 20 : 40}px rgba(0,0,0,0.45))`,
+              }}
+            />
+          </motion.div>
+
+          {!playing && (
+            <span
+              className="block w-full text-center"
+              style={{
+                fontFamily: MONO,
+                fontSize: docked ? 7 : 9,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.55)",
+                lineHeight: 1.3,
+              }}
+            >
+              {setMoodLabel}
+            </span>
+          )}
+        </div>
       </motion.button>
     </>
   );

@@ -31,7 +31,7 @@ export function ClientLogo({
     <img
       src={client.logo}
       alt={client.name}
-      className={`client-logo w-auto max-w-[120px] object-contain ${tone === "light" ? "client-logo--light" : ""} ${heights[size]} ${className}`}
+      className={`client-logo w-auto max-w-[140px] object-contain ${tone === "light" ? "client-logo--light" : ""} ${heights[size]} ${className}`}
       style={style}
       loading="lazy"
       onError={() => setImgFailed(true)}
