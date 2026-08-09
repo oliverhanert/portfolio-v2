@@ -1,12 +1,18 @@
-/* Typografi: Syne = store titler. DM Sans = alt andet. DM Mono = små labels. */
+/* Typografi: Syne = store titler. Inter = brødtekst. DM Mono = små labels. */
 
 .font-display {
   font-family: var(--font-display);
+  font-weight: 800;
+  font-synthesis: none;
   letter-spacing: -0.03em;
 }
 
 .font-body {
   font-family: var(--font-body);
+  font-size: var(--body-size);
+  font-weight: 400;
+  line-height: var(--body-line-height);
+  color: var(--body-text);
 }
 
 .font-mono {
@@ -51,10 +57,16 @@
 /* Brødtekst */
 .type-body {
   font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.8;
-  color: rgba(14, 14, 14, 0.6);
+  font-size: var(--body-size);
+  font-weight: 400;
+  font-style: normal;
+  line-height: var(--body-line-height);
+  color: var(--body-text);
   max-width: 58ch;
+}
+
+.type-body-muted {
+  color: var(--body-text-muted);
 }
 
 /* Highlight-kort titel */
@@ -82,6 +94,41 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(14, 14, 14, 0.32);
+}
+
+/* Hero-navn — stor display */
+.type-hero-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 8.5vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: manual;
+  text-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .type-hero-name {
+    max-width: 12ch;
+    text-wrap: balance;
+  }
+}
+
+/* Hero-tagline under navn */
+.type-hero-tagline {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.45;
+  color: rgba(14, 14, 14, 0.55);
+  max-width: 30ch;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+  text-wrap: pretty;
 }
 
 /* Hero breadcrumb */

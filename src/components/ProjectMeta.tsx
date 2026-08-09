@@ -2,6 +2,7 @@ import type { Project } from "@/data/types";
 import { useLanguage } from "@/i18n/context";
 import { Button } from "@/components/Button";
 import { ProjectLabels } from "@/components/ProjectLabels";
+import { EXTERNAL_LINK_PROPS } from "@/lib/externalLink";
 
 type Props = {
   project: Project;
@@ -25,6 +26,12 @@ export function ProjectMeta({ project, className = "" }: Props) {
         <p className="type-label mb-2">{t.project.role}</p>
         <p className="type-meta-value">{project.role}</p>
       </div>
+      {project.inDevelopment && (
+        <div>
+          <p className="type-label mb-2">{t.project.status}</p>
+          <p className="type-meta-value">{t.project.inDevelopment}</p>
+        </div>
+      )}
       {project.agency && (
         <div>
           <p className="type-label mb-2">{t.project.agency}</p>
@@ -46,8 +53,14 @@ export function ProjectMeta({ project, className = "" }: Props) {
         </div>
       </div>
       {project.url && (
-        <Button href={project.url} variant="fill" size="sm" accent={project.accent}>
-          {t.project.visitSite}
+        <Button
+          href={project.url}
+          variant="fill"
+          size="sm"
+          accent={project.accent}
+          {...EXTERNAL_LINK_PROPS}
+        >
+          {project.inDevelopment ? t.project.visitStaging : t.project.visitSite}
         </Button>
       )}
 

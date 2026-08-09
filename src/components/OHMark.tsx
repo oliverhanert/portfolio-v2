@@ -9,8 +9,7 @@ export function OHMark({ dark = false }: Props) {
     <span
       className="font-display select-none whitespace-nowrap"
       style={{
-        fontWeight: 800,
-        fontSize: "clamp(0.8rem, 2vw, 0.95rem)",
+        fontSize: "clamp(1.1rem, 2.8vw, 1.35rem)",
         letterSpacing: "-0.03em",
         lineHeight: 1,
         color: dark ? "#faf9f7" : INK,

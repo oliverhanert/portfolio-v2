@@ -5,6 +5,7 @@ import { ProjectMeta } from "@/components/ProjectMeta";
 import { ClientLogo } from "@/components/ClientLogo";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { ProjectLabels } from "@/components/ProjectLabels";
+import { DevelopmentBadge } from "@/components/DevelopmentBadge";
 import { NextProjectSection } from "@/components/NextProjectSection";
 import { StoryParagraphs, FadeUp } from "@/components/motion";
 import { heroImageUrl, useProjects } from "@/data/projects";
@@ -51,7 +52,6 @@ export function ProjectPage() {
           <span
             className="font-display"
             style={{
-              fontWeight: 800,
               fontSize: "clamp(8rem,24vw,28rem)",
               color: "transparent",
               letterSpacing: "-0.05em",
@@ -68,11 +68,22 @@ export function ProjectPage() {
               <span className="type-eyebrow">{project.category}</span>
               <span className="w-1 h-1 rounded-full bg-black/15" />
               <span className="type-eyebrow">{project.year}</span>
+              {project.inDevelopment && <DevelopmentBadge accent={project.accent} />}
             </div>
           </FadeUp>
 
           <FadeUp delay={0.08}>
-            <h1 className="type-title mb-5">{project.title}</h1>
+            <h1 className="type-title mb-5" style={{ maxWidth: project.titleLines ? "12ch" : undefined }}>
+              {project.titleLines ? (
+                <>
+                  {project.titleLines[0]}
+                  <br />
+                  {project.titleLines[1]}
+                </>
+              ) : (
+                project.title
+              )}
+            </h1>
           </FadeUp>
           <FadeUp delay={0.16}>
             <p className="type-tagline mb-6">{project.tagline}</p>
@@ -152,29 +163,28 @@ export function ProjectPage() {
       )}
 
       <div className="px-5 sm:px-10 py-14 sm:py-20">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-12 lg:gap-24">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,200px)_minmax(0,1fr)] gap-12 lg:gap-16 xl:gap-24">
           <FadeUp>
             <ProjectMeta project={project} className="lg:sticky lg:top-28 lg:self-start" />
           </FadeUp>
 
-          <StoryParagraphs text={project.story} />
-          {project.highlight && (
-            <FadeUp className="mt-8">
-              <p
-                className="type-body"
-                style={{
-                  fontSize: "1.02rem",
-                  lineHeight: 1.75,
-                  color: "rgba(14,14,14,0.52)",
-                  maxWidth: "52ch",
-                  borderLeft: `2px solid ${project.accent}`,
-                  paddingLeft: "1.1rem",
-                }}
-              >
-                {project.highlight}
-              </p>
-            </FadeUp>
-          )}
+          <div className="min-w-0">
+            <StoryParagraphs text={project.story} />
+            {project.highlight && (
+              <FadeUp className="mt-8 sm:mt-10">
+                <p
+                  className="type-body type-body-muted"
+                  style={{
+                    maxWidth: "52ch",
+                    borderLeft: `2px solid ${project.accent}`,
+                    paddingLeft: "1.1rem",
+                  }}
+                >
+                  {project.highlight}
+                </p>
+              </FadeUp>
+            )}
+          </div>
         </div>
       </div>
 

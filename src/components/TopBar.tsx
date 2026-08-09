@@ -1,9 +1,9 @@
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate, useLocation, Link } from "react-router";
 import { motion } from "motion/react";
 import { OHMark } from "./OHMark";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/i18n/context";
-import { MONO, SITE } from "@/lib/constants";
+import { MONO } from "@/lib/constants";
 
 export function TopBar({ dark = false, className = "" }: { dark?: boolean; className?: string }) {
   const navigate = useNavigate();
@@ -30,8 +30,8 @@ export function TopBar({ dark = false, className = "" }: { dark?: boolean; class
       <div className="flex items-center gap-4 sm:gap-5">
         <LanguageSwitcher dark={dark} />
         {isHome ? (
-          <a
-            href={`mailto:${SITE.email}`}
+          <Link
+            to="/contacts"
             className="hover:opacity-40 transition-opacity"
             style={{
               fontFamily: MONO,
@@ -44,7 +44,7 @@ export function TopBar({ dark = false, className = "" }: { dark?: boolean; class
             }}
           >
             {t.nav.contact}
-          </a>
+          </Link>
         ) : (
           <button
             onClick={() => navigate("/")}

@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, Link } from "react-router";
 import { motion } from "motion/react";
 import { TopBar } from "@/components/TopBar";
 import { ProjectDrawer } from "@/components/ProjectDrawer";
@@ -102,7 +102,6 @@ function ProjectRow({
               <span
                 className="font-display select-none"
                 style={{
-                  fontWeight: 600,
                   fontSize: "clamp(1.5rem,4vw,4rem)",
                   color: "rgba(255,255,255,0.06)",
                   letterSpacing: "-0.02em",
@@ -129,7 +128,6 @@ function ProjectRow({
           <span
             className="font-display block break-words"
             style={{
-              fontWeight: 600,
               fontSize: "clamp(0.85rem,1.05vw,1.05rem)",
               lineHeight: 1.2,
               color: isHovered ? INK : "rgba(14,14,14,0.55)",
@@ -164,6 +162,8 @@ export function HomePage() {
   const featuredProjects = useFeaturedProjects();
   const secondaryProjects = useSecondaryProjects();
   const { t } = useLanguage();
+  const [heroFirstName, ...heroLastNameParts] = t.home.heroName.split(" ");
+  const heroLastName = heroLastNameParts.join(" ");
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [active, setActive] = useState<Project | null>(null);
 
@@ -186,47 +186,36 @@ export function HomePage() {
       <ProjectDrawer project={active} onClose={() => setActive(null)} />
 
       <section
-        className="relative min-h-screen overflow-hidden grid grid-cols-1 md:grid-cols-2"
+        className="relative min-h-[100svh] md:min-h-screen overflow-hidden grid grid-cols-1 md:grid-cols-2"
         style={{ paddingTop: "clamp(4.5rem,10vh,7rem)" }}
       >
-        <div className="relative z-10 flex flex-col h-full min-h-0 px-6 sm:px-10 pb-16 md:pb-0">
-          <div className="flex-1 flex flex-col justify-center w-full">
-            <div className="w-full max-w-[30rem] flex flex-col gap-6 sm:gap-7">
-              <motion.p
-                className="type-eyebrow"
-                style={{ color: "rgba(0,0,0,0.32)" }}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55 }}
-              >
-                {t.home.heroEyebrow}
-              </motion.p>
-
+        <div className="relative z-10 flex flex-col h-full min-h-0 min-w-0 px-6 sm:px-10 pb-10 md:pb-0 pr-[min(36vw,148px)] sm:pr-[min(32vw,168px)] md:pr-10">
+          <div className="flex-1 flex flex-col justify-center w-full min-w-0">
+            <div className="w-full min-w-0 max-w-[34rem] md:max-w-[32rem] flex flex-col gap-4 sm:gap-6">
               <motion.h1
-                className="font-display"
-                style={{
-                  fontWeight: 800,
-                  fontSize: "clamp(1.85rem, 4.2vw, 3.4rem)",
-                  lineHeight: 1.02,
-                  letterSpacing: "-0.03em",
-                  maxWidth: "16ch",
-                  textWrap: "balance",
-                }}
+                className="type-hero-name"
                 initial={{ opacity: 0, y: -12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               >
-                {t.home.heroTitle}
+                {heroFirstName}
+                <br className="md:hidden" />
+                <span className="hidden md:inline"> </span>
+                {heroLastName}
               </motion.h1>
 
               <motion.p
-                className="type-body"
-                style={{
-                  fontSize: "clamp(0.98rem, 1.5vw, 1.08rem)",
-                  lineHeight: 1.75,
-                  maxWidth: "42ch",
-                  color: "rgba(14,14,14,0.58)",
-                }}
+                className="type-hero-tagline"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: 0.06 }}
+              >
+                {t.home.heroTagline}
+              </motion.p>
+
+              <motion.p
+                className="type-body type-body-muted"
+                style={{ maxWidth: "42ch" }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15, duration: 0.6 }}
@@ -237,14 +226,12 @@ export function HomePage() {
           </div>
         </div>
 
-        <div className="relative hidden md:flex items-end justify-end pe-8 pb-0 overflow-hidden">
+        <div className="absolute z-[1] right-5 sm:right-8 top-[clamp(4.75rem,11vh,7.25rem)] w-[min(38vw,152px)] sm:w-[min(34vw,176px)] md:static md:z-auto md:flex md:items-end md:justify-end md:w-auto md:self-end md:pe-8 md:pb-0 overflow-hidden">
           <motion.img
             src={portrait}
             alt={SITE.name}
-            className="pointer-events-none select-none"
+            className="pointer-events-none select-none w-full md:w-auto md:max-w-none h-[clamp(220px,34vh,680px)] md:h-[min(78vh,680px)]"
             style={{
-              height: "min(78vh, 680px)",
-              width: "auto",
               aspectRatio: "5 / 7",
               objectFit: "cover",
               objectPosition: "top center",
@@ -271,7 +258,7 @@ export function HomePage() {
           <p className="type-eyebrow mb-4" style={{ color: "rgba(0,0,0,0.28)" }}>
             {t.home.featuredLabel}
           </p>
-          <p className="type-body" style={{ fontSize: 15, maxWidth: "48ch", color: "rgba(0,0,0,0.45)" }}>
+          <p className="type-body type-body-muted" style={{ maxWidth: "48ch" }}>
             {t.home.featuredIntro}
           </p>
         </div>
@@ -291,7 +278,7 @@ export function HomePage() {
           <span className="type-eyebrow" style={{ color: "rgba(0,0,0,0.28)" }}>
             {t.home.moreProjectsLabel}
           </span>
-          <p className="type-body mt-3" style={{ fontSize: 14, maxWidth: "48ch", color: "rgba(0,0,0,0.45)" }}>
+          <p className="type-body type-body-muted mt-3" style={{ maxWidth: "48ch" }}>
             {t.home.moreProjectsIntro}
           </p>
           <p className="sr-only" aria-live="polite">
@@ -335,9 +322,9 @@ export function HomePage() {
           {SITE.name} &copy; {SITE.year}
         </span>
         <div className="flex gap-5" style={{ fontFamily: MONO, fontSize: 9, letterSpacing: "0.06em" }}>
-          <a href={`mailto:${SITE.email}`} className="hover:opacity-60 transition-opacity">
+          <Link to="/contacts" className="hover:opacity-60 transition-opacity">
             {t.nav.contact}
-          </a>
+          </Link>
           <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity">
             LinkedIn
           </a>

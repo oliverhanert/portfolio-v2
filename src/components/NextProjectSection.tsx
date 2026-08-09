@@ -1,7 +1,7 @@
 import { FadeUp } from "@/components/motion";
 import type { Project } from "@/data/types";
 import { emitCursor } from "@/lib/cursor";
-import { CREAM, DARK, DISPLAY, MONO } from "@/lib/constants";
+import { CREAM, DARK, MONO } from "@/lib/constants";
 
 type Props = {
   next: Project;
@@ -36,10 +36,8 @@ export function NextProjectSection({ next, eyebrow, cta, onNavigate }: Props) {
       <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
         <FadeUp className="relative flex flex-col justify-center px-5 sm:px-10 py-16 sm:py-20 lg:py-24 lg:pr-14">
           <span
-            className="absolute left-5 sm:left-10 top-8 sm:top-12 select-none pointer-events-none"
+            className="font-display absolute left-5 sm:left-10 top-8 sm:top-12 select-none pointer-events-none"
             style={{
-              fontFamily: DISPLAY,
-              fontWeight: 800,
               fontSize: "clamp(4.5rem, 14vw, 9rem)",
               lineHeight: 0.85,
               letterSpacing: "-0.05em",
@@ -66,21 +64,31 @@ export function NextProjectSection({ next, eyebrow, cta, onNavigate }: Props) {
           <h2
             className="relative font-display mb-4 transition-colors duration-300 group-hover:text-[#faf9f7]"
             style={{
-              fontWeight: 800,
-              fontSize: "clamp(1.85rem, 4.8vw, 3.5rem)",
+              fontSize: next.titleLines
+                ? "clamp(1.65rem, 4vw, 3rem)"
+                : "clamp(1.5rem, 3.8vw, 2.75rem)",
               lineHeight: 1.02,
               letterSpacing: "-0.03em",
-              maxWidth: "13ch",
+              maxWidth: next.titleLines ? "11ch" : "14ch",
               textWrap: "balance",
+              overflowWrap: "anywhere",
               color: CREAM,
             }}
           >
-            {next.title}
+            {next.titleLines ? (
+              <>
+                {next.titleLines[0]}
+                <br />
+                {next.titleLines[1]}
+              </>
+            ) : (
+              next.title
+            )}
           </h2>
 
           <p
-            className="relative type-body mb-10"
-            style={{ color: "rgba(250,249,247,0.42)", maxWidth: "34ch", fontSize: "0.95rem" }}
+            className="relative type-body type-body-muted mb-10"
+            style={{ maxWidth: "34ch", color: "rgba(250,249,247,0.42)" }}
           >
             {next.tagline}
           </p>
@@ -123,7 +131,6 @@ export function NextProjectSection({ next, eyebrow, cta, onNavigate }: Props) {
                 <span
                   className="font-display select-none"
                   style={{
-                    fontWeight: 800,
                     fontSize: "clamp(2rem, 8vw, 4rem)",
                     color: "rgba(250,249,247,0.08)",
                     letterSpacing: "-0.03em",

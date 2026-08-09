@@ -2,17 +2,21 @@ import img001 from "@/assets/projects/001-hero.jpg";
 import img001g1 from "@/assets/projects/001-gallery-1.jpg";
 import img001g2 from "@/assets/projects/001-gallery-2.jpg";
 import img002 from "@/assets/projects/002-hero.webp";
-import img002g1 from "@/assets/projects/002-gallery-1.jpg";
-import img002g2 from "@/assets/projects/002-gallery-2.jpg";
-import img003 from "@/assets/projects/003-hero.jpg";
-import img004 from "@/assets/projects/004-hero.jpg";
-import img004g1 from "@/assets/projects/004-gallery-1.jpg";
-import img004g2 from "@/assets/projects/004-gallery-2.jpg";
-import img005 from "@/assets/projects/005-hero.jpg";
+import img002Scene from "@/assets/projects/002-hero.png";
+import img002Composite from "@/assets/projects/002-gallery-composite.png";
+import img002ScreenHome from "@/assets/projects/002-screen-home.png";
+import img002ScreenPlus from "@/assets/projects/002-screen-plus.png";
+import img003 from "@/assets/projects/003-hero.png";
+import img003g1 from "@/assets/projects/003-gallery-1.png";
+import img003g2 from "@/assets/projects/003-gallery-2.png";
+import img004 from "@/assets/projects/004-hero.png";
+import img004g1 from "@/assets/projects/004-gallery-1.png";
+import img004g2 from "@/assets/projects/004-gallery-2.png";
+import img005 from "@/assets/projects/005-hero.png";
 import img007 from "@/assets/projects/007-hero.jpg";
 import img008 from "@/assets/projects/008-hero.jpg";
-import img008g1 from "@/assets/projects/008-gallery-1.jpg";
-import img008g2 from "@/assets/projects/008-gallery-2.jpg";
+import img008g1 from "@/assets/projects/008-gallery-1.png";
+import img008g2 from "@/assets/projects/008-gallery-2.png";
 import img009 from "@/assets/projects/009-hero.jpg";
 import img010 from "@/assets/projects/010-hero.webp";
 import img011 from "@/assets/projects/011-hero.jpg";
@@ -35,6 +39,8 @@ export type ProjectBase = {
   agency?: string;
   accent: string;
   featured?: boolean;
+  showGalleryOnFeatured?: boolean;
+  inDevelopment?: boolean;
   gallery?: ProjectGalleryItem[];
 };
 
@@ -61,19 +67,19 @@ function caseGallery(
   extras: [string, string],
 ): ProjectGalleryItem[] {
   return [
-    { src: hero, alt: `${title} — overblik`, aspect: "16/9", wide: true },
+    { src: hero, alt: `${title}, overblik`, aspect: "16/9", wide: true },
     {
       src: extras[0],
-      alt: `${title} — detalje`,
-      aspect: "4/5",
+      alt: `${title}, detalje`,
+      aspect: "4/3",
       fit: "cover",
       offset: "right",
       wide: false,
     },
     {
       src: extras[1],
-      alt: `${title} — mobil`,
-      aspect: "9/16",
+      alt: `${title}, stemning`,
+      aspect: "4/3",
       fit: "cover",
       wide: false,
     },
@@ -101,63 +107,175 @@ export const PROJECTS_BASE: ProjectBase[] = [
     tech: ["React", "Next.js", "GraphQL", "Tailwind CSS"],
     agency: "Peytz & Co.",
     url: "https://folkeskolen.dk",
-    accent: "#b91c1c",
+    accent: "#0000fe",
     featured: true,
-    gallery: caseGallery(img002, "Folkeskolen", [img002g1, img002g2]),
+    showGalleryOnFeatured: false,
+    gallery: [
+      {
+        src: img002Scene,
+        alt: "Folkeskolen, elever på skoletur",
+        aspect: "16/9",
+        wide: true,
+        fit: "cover",
+      },
+      {
+        src: img002Composite,
+        alt: "Folkeskolen, oversigt over folkeskolen.dk og Folkeskolen Plus+",
+        wide: true,
+        fit: "contain",
+        bg: "#e8e3d9",
+      },
+      {
+        src: img002ScreenHome,
+        alt: "Folkeskolen, forsiden",
+        aspect: "4/3",
+        fit: "contain",
+        bg: "#ededeb",
+        offset: "right",
+        wide: false,
+      },
+      {
+        src: img002ScreenPlus,
+        alt: "Folkeskolen Plus+, medlemsportal",
+        aspect: "4/3",
+        fit: "contain",
+        bg: "#ededeb",
+        wide: false,
+      },
+    ],
   },
   {
     id: "003",
     year: "2024",
     categoryKey: "Rejsebureau",
     image: img003,
-    tech: ["React", "TypeScript", "Umbraco", "SCSS"],
+    tech: ["WordPress", "Multisite", "Gutenberg", "SCSS", "HubSpot"],
     agency: "Peytz & Co.",
     url: "https://www.profil-rejser.dk",
     accent: "#0c6b8a",
+    gallery: [
+      {
+        src: img003,
+        alt: "Profil Rejser, hero med tropisk destination",
+        aspect: "16/9",
+        wide: true,
+      },
+      {
+        src: img003g1,
+        alt: "Profil Rejser, Grønlandsrejse med skib og isfjelde",
+        aspect: "4/3",
+        fit: "cover",
+        offset: "right",
+        wide: false,
+      },
+      {
+        src: img003g2,
+        alt: "Profil Rejser, bjerglandskab som hero-billede",
+        aspect: "4/3",
+        fit: "cover",
+        wide: false,
+      },
+    ],
   },
   {
     id: "004",
-    year: "2023",
+    year: "2026",
     categoryKey: "Medlemsplatform",
     image: img004,
-    tech: ["React", "TypeScript", "Umbraco", "SCSS"],
+    tech: ["WordPress", "Gutenberg", "SCSS", "PHP"],
     agency: "Peytz & Co.",
     url: "https://kf.wp.prod.combell.peytz.dk",
-    accent: "#374151",
+    accent: "#152e19",
     featured: true,
-    gallery: caseGallery(img004, "Konstruktørforeningen", [img004g1, img004g2]),
+    inDevelopment: true,
+    gallery: [
+      {
+        src: img004,
+        alt: "Konstruktørforeningen, bygningskonstruktører på byggeplads",
+        aspect: "16/9",
+        wide: true,
+        fit: "cover",
+      },
+      {
+        src: img004g1,
+        alt: "Konstruktørforeningen, forsiden med grøn hero",
+        fit: "contain",
+        bg: "#f4f3f1",
+        wide: false,
+      },
+      {
+        src: img004g2,
+        alt: "Konstruktørforeningen, kurser og arrangementer",
+        fit: "contain",
+        bg: "#f4f3f1",
+        wide: false,
+      },
+    ],
   },
   {
     id: "005",
     year: "2023",
     categoryKey: "Brand & website",
     image: img005,
-    tech: ["React", "TypeScript", "Umbraco", "SCSS"],
+    tech: ["WordPress", "SCSS", "Gutenberg"],
     agency: "Peytz & Co.",
     url: "https://www.pulsen.dk",
     accent: "#dc2626",
+    gallery: [
+      {
+        src: img005,
+        alt: "Pulsen Gymnasium, website mockup",
+        aspect: "16/9",
+        wide: true,
+        fit: "contain",
+        bg: "#ebe4d8",
+      },
+    ],
   },
   {
     id: "007",
-    year: "2023",
+    year: "2026",
     categoryKey: "Patientorganisation",
     image: img007,
-    tech: ["React", "TypeScript", "Umbraco", "WCAG 2.1 AA"],
+    tech: ["WordPress", "Gutenberg", "SCSS", "WCAG 2.1 AA"],
     agency: "Peytz & Co.",
     url: "https://diabetes.wp.prod.combell.peytz.dk",
     accent: "#0369a1",
+    inDevelopment: true,
   },
   {
     id: "008",
-    year: "2023",
+    year: "2025",
     categoryKey: "Patientorganisation",
     image: img008,
-    tech: ["React", "TypeScript", "Umbraco", "SCSS"],
+    tech: ["WordPress", "Gutenberg", "Custom Blocks", "Arrigoo", "SCSS"],
     agency: "Peytz & Co.",
     url: "https://www.gigtforeningen.dk",
-    accent: "#7c3aed",
+    accent: "#fe2909",
     featured: true,
-    gallery: caseGallery(img008, "Gigtforeningen", [img008g1, img008g2]),
+    gallery: [
+      {
+        src: img008,
+        alt: "Gigtforeningen, hero med kampagnen Kampen mod smerterne",
+        aspect: "16/9",
+        wide: true,
+        fit: "cover",
+      },
+      {
+        src: img008g1,
+        alt: "Gigtforeningen, forsiden med hero og medlemsvalg",
+        fit: "contain",
+        bg: "#f1eee4",
+        wide: false,
+      },
+      {
+        src: img008g2,
+        alt: "Gigtforeningen, underside med illustration og indhold",
+        fit: "contain",
+        bg: "#f1eee4",
+        wide: false,
+      },
+    ],
   },
   {
     id: "009",

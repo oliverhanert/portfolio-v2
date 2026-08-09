@@ -18,8 +18,12 @@ export function HomeContactSection() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,0.9fr)_1fr] gap-12 lg:gap-20 items-start">
         <div>
           <motion.h2
-            className="type-lead mb-5"
-            style={{ maxWidth: "16ch" }}
+            className="font-display mb-5"
+            style={{
+              maxWidth: "16ch",
+              fontSize: "clamp(1.25rem, 2vw, 1.65rem)",
+              lineHeight: 1.12,
+            }}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -28,8 +32,8 @@ export function HomeContactSection() {
             {t.home.contactTitle}
           </motion.h2>
           <motion.p
-            className="type-body"
-            style={{ fontSize: "1rem", maxWidth: "42ch", color: "rgba(14,14,14,0.55)" }}
+            className="type-body type-body-muted"
+            style={{ maxWidth: "42ch" }}
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -127,7 +131,7 @@ export function HomeContactSection() {
       </div>
 
       <div className="max-w-6xl mx-auto mt-12 sm:mt-14">
-        <Button href={`mailto:${SITE.email}`} variant="outline">
+        <Button href="/contacts" variant="outline">
           {t.nav.contact}
         </Button>
       </div>

@@ -61,7 +61,7 @@ export const cvContent: Record<Locale, CvContent> = {
         company: "Peytz & Co.",
         period: "Aug 2025 – Nu, København",
         description:
-          "Udvikling og design i React, Next.js og WordPress. Tæt samarbejde med designere, udviklere og projektledere — fra UI-design til implementering og kundedialog. Bl.a. Folkeskolen, Diabetesforeningen, Konstruktørforeningen, Pulsen og Profil Rejser.",
+          "Udvikling og design i React, Next.js og WordPress. Tæt samarbejde med designere, udviklere og projektledere, fra UI-design til implementering og kundedialog. Bl.a. Folkeskolen, Diabetesforeningen, Konstruktørforeningen, Pulsen og Profil Rejser.",
       },
       {
         role: "Frontend-udvikler & WordPress-konfigurator",
@@ -145,7 +145,7 @@ export const cvContent: Record<Locale, CvContent> = {
         company: "Peytz & Co.",
         period: "Aug 2025 – Present, Copenhagen",
         description:
-          "Development and design on websites and platforms in React, Next.js and WordPress. I work closely with designers, developers and project managers — owning tasks from UI design and components through to front-end implementation and client dialogue. Clients and projects include Folkeskolen, Diabetesforeningen, Konstruktørforeningen, Pulsen Gymnasium and Profil Rejser.",
+          "Development and design on websites and platforms in React, Next.js and WordPress. I work closely with designers, developers and project managers, owning tasks from UI design and components through to front-end implementation and client dialogue. Clients and projects include Folkeskolen, Diabetesforeningen, Konstruktørforeningen, Pulsen Gymnasium and Profil Rejser.",
       },
       {
         role: "Frontend developer & WordPress configurator",

@@ -91,9 +91,8 @@ export function Button({
     .join(" ");
 
   if (href) {
-    const { href: linkHref, ...anchorProps } = props as LinkProps;
     return (
-      <a href={linkHref} className={classes} style={style} {...anchorProps}>
+      <a href={href} className={classes} style={style} {...(props as Omit<LinkProps, keyof BaseProps | "href">)}>
         {content}
       </a>
     );

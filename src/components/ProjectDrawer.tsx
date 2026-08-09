@@ -2,12 +2,14 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "@/components/Button";
+import { DevelopmentBadge } from "@/components/DevelopmentBadge";
 import { ProjectLabels } from "@/components/ProjectLabels";
 import { ClientLogo } from "@/components/ClientLogo";
 import { storyExcerpt } from "@/data/projects";
 import type { Project } from "@/data/types";
 import { useLanguage } from "@/i18n/context";
-import { CREAM, DISPLAY, INK, MONO } from "@/lib/constants";
+import { CREAM, INK, MONO } from "@/lib/constants";
+import { EXTERNAL_LINK_PROPS } from "@/lib/externalLink";
 
 type Props = {
   project: Project | null;
@@ -104,10 +106,8 @@ export function ProjectDrawer({ project, onClose }: Props) {
                     />
                   )}
                   <span
-                    className="select-none leading-none"
+                    className="font-display select-none leading-none"
                     style={{
-                      fontFamily: DISPLAY,
-                      fontWeight: 800,
                       fontSize: "clamp(3rem,12vw,7rem)",
                       color: "rgba(255,255,255,0.12)",
                       letterSpacing: "-0.04em",
@@ -144,7 +144,7 @@ export function ProjectDrawer({ project, onClose }: Props) {
                     paddingRight: "clamp(1.5rem,4vw,2.5rem)",
                   }}
                 >
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
                     <span
                       style={{
                         fontFamily: MONO,
@@ -168,12 +168,11 @@ export function ProjectDrawer({ project, onClose }: Props) {
                     >
                       {project.year}
                     </span>
+                    {project.inDevelopment && <DevelopmentBadge accent={project.accent} />}
                   </div>
                   <h2
-                    className="break-words"
+                    className="font-display break-words"
                     style={{
-                      fontFamily: DISPLAY,
-                      fontWeight: 700,
                       fontSize: "clamp(1.25rem, 3.5vw, 1.85rem)",
                       lineHeight: 1.08,
                       letterSpacing: "-0.02em",
@@ -190,7 +189,7 @@ export function ProjectDrawer({ project, onClose }: Props) {
                     {project.tagline}
                   </p>
                   <ProjectLabels labels={project.labels} accent={project.accent} className="mb-4" />
-                  <p className="type-body" style={{ fontSize: 14, maxWidth: "none" }}>
+                  <p className="type-body type-body-muted mb-4" style={{ maxWidth: "none" }}>
                     {storyExcerpt(project.story, 200)}
                   </p>
                 </div>
@@ -205,8 +204,14 @@ export function ProjectDrawer({ project, onClose }: Props) {
               }}
             >
               {project.url ? (
-                <Button href={project.url} variant="ghost" size="sm">
-                  {t.project.visitSite}
+                <Button
+                  href={project.url}
+                  variant="outline"
+                  size="sm"
+                  accent={project.accent}
+                  {...EXTERNAL_LINK_PROPS}
+                >
+                  {project.inDevelopment ? t.project.visitStaging : t.project.visitSite}
                 </Button>
               ) : (
                 <span />

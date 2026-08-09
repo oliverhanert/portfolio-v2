@@ -4,7 +4,7 @@ import { ContactIcon } from "@/components/ContactIcon";
 import { CONTACT_ITEMS, ICON_SLOT_SIZE } from "@/data/contactLinks";
 import { useLanguage } from "@/i18n/context";
 import { emitCursor } from "@/lib/cursor";
-import { BODY, CREAM, DISPLAY, MONO, SITE } from "@/lib/constants";
+import { BODY, CREAM, MONO, SITE } from "@/lib/constants";
 
 function ContactRow({
   iconSrc,
@@ -46,7 +46,6 @@ function ContactRow({
         <span
           className="font-display block transition-colors duration-300 group-hover:text-white"
           style={{
-            fontWeight: 600,
             fontSize: "clamp(0.9rem, 2vw, 1.05rem)",
             lineHeight: 1.2,
             letterSpacing: "-0.03em",
@@ -124,10 +123,8 @@ export function ContactsPage() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <h1
-            className="select-none mb-4"
+            className="font-display select-none mb-4"
             style={{
-              fontFamily: DISPLAY,
-              fontWeight: 800,
               fontSize: "clamp(3rem, 10vw, 7rem)",
               lineHeight: 0.88,
               letterSpacing: "-0.04em",
@@ -152,8 +149,6 @@ export function ContactsPage() {
           <p
             className="mt-8 type-body"
             style={{
-              fontSize: "clamp(0.95rem, 1.5vw, 1.05rem)",
-              lineHeight: 1.75,
               maxWidth: "42ch",
               color: "rgba(250,249,247,0.55)",
             }}

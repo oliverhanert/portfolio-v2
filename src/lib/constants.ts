@@ -1,5 +1,5 @@
 export const DISPLAY = "'Syne', sans-serif";
-export const BODY = "'DM Sans', sans-serif";
+export const BODY = "'Inter', sans-serif";
 export const MONO = "'DM Mono', monospace";
 export const INK = "#0e0e0e";
 export const CREAM = "#faf9f7";

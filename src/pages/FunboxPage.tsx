@@ -4,7 +4,7 @@ import { TopBar } from "@/components/TopBar";
 import { FunboxAudioToggle } from "@/components/FunboxAudioToggle";
 import { GALLERY_ITEMS } from "@/data/gallery";
 import { useLanguage } from "@/i18n/context";
-import { DARK, DISPLAY, MONO, SITE } from "@/lib/constants";
+import { DARK, MONO, SITE } from "@/lib/constants";
 
 export function FunboxPage() {
   const { t } = useLanguage();
@@ -27,10 +27,8 @@ export function FunboxPage() {
         style={{ borderBottom: "1px solid rgba(255,255,255,0.07)" }}
       >
         <motion.h1
-          className="text-white select-none"
+          className="text-white select-none font-display"
           style={{
-            fontFamily: DISPLAY,
-            fontWeight: 800,
             fontSize: "clamp(3.5rem,10vw,11rem)",
             lineHeight: 0.88,
             letterSpacing: "-0.04em",
@@ -84,7 +82,6 @@ export function FunboxPage() {
                   <span
                     className="font-display text-center px-6 select-none"
                     style={{
-                      fontWeight: 700,
                       fontSize: "clamp(1rem,3vw,1.5rem)",
                       letterSpacing: "-0.02em",
                       color: "rgba(255,255,255,0.2)",
@@ -108,7 +105,7 @@ export function FunboxPage() {
                 {item.title && (
                   <span
                     className="text-white font-display"
-                    style={{ fontWeight: 700, fontSize: "clamp(0.9rem,2vw,1.2rem)", letterSpacing: "-0.02em" }}
+                    style={{ fontSize: "clamp(0.9rem,2vw,1.2rem)", letterSpacing: "-0.02em" }}
                   >
                     {item.title}
                   </span>

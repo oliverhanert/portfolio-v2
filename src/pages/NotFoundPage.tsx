@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { TopBar } from "@/components/TopBar";
 import { Button } from "@/components/Button";
 import { useLanguage } from "@/i18n/context";
-import { BODY, CREAM, DISPLAY, FUNBOX_PINK, INK, MONO } from "@/lib/constants";
+import { BODY, CREAM, FUNBOX_PINK, INK, MONO } from "@/lib/constants";
 
 export function NotFoundPage() {
   const navigate = useNavigate();
@@ -27,7 +27,6 @@ export function NotFoundPage() {
         <motion.span
           className="absolute left-1/2 top-1/2 font-display"
           style={{
-            fontWeight: 800,
             fontSize: "clamp(10rem, 42vw, 28rem)",
             lineHeight: 0.82,
             letterSpacing: "-0.06em",
@@ -56,7 +55,6 @@ export function NotFoundPage() {
         <motion.h1
           className="font-display mb-5 max-w-[12ch]"
           style={{
-            fontWeight: 800,
             fontSize: "clamp(2.4rem, 7vw, 5rem)",
             lineHeight: 0.92,
             letterSpacing: "-0.03em",
@@ -69,8 +67,7 @@ export function NotFoundPage() {
         </motion.h1>
 
         <motion.p
-          className="type-body mb-10 max-w-[34ch]"
-          style={{ color: "rgba(0,0,0,0.48)", fontSize: "clamp(0.95rem, 2vw, 1.05rem)" }}
+          className="type-body mb-10 max-w-[34ch] type-body-muted"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.28, duration: 0.55 }}
@@ -109,10 +106,8 @@ export function NotFoundPage() {
       </section>
 
       <motion.div
-        className="pointer-events-none absolute bottom-8 right-8 hidden sm:block"
+        className="pointer-events-none absolute bottom-8 right-8 hidden sm:block font-display"
         style={{
-          fontFamily: DISPLAY,
-          fontWeight: 700,
           fontSize: "clamp(3rem, 8vw, 6rem)",
           color: `${FUNBOX_PINK}12`,
           letterSpacing: "-0.04em",

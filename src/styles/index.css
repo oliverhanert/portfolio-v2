@@ -8,9 +8,13 @@
 
 :root {
   --font-display: "Syne", sans-serif;
-  --font-body: "DM Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
   --font-mono: "DM Mono", monospace;
   --ink: #0e0e0e;
+  --body-text: #101214;
+  --body-text-muted: rgba(16, 18, 20, 0.62);
+  --body-size: 11px;
+  --body-line-height: 19px;
   --cream: #faf9f7;
 }
 
@@ -86,7 +90,11 @@
 
   body {
     background-color: var(--background);
-    color: var(--foreground);
+    color: var(--body-text);
+    font-family: var(--font-body);
+    font-size: var(--body-size);
+    font-weight: 400;
+    line-height: var(--body-line-height);
   }
 
   ::-webkit-scrollbar {

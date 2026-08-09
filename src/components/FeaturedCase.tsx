@@ -4,7 +4,10 @@ import { ClientLogo } from "@/components/ClientLogo";
 import { ProjectLabels } from "@/components/ProjectLabels";
 import type { Project } from "@/data/types";
 import { useLanguage } from "@/i18n/context";
-import { BODY, INK, MONO } from "@/lib/constants";
+import { INK, MONO } from "@/lib/constants";
+import { DevelopmentBadge } from "@/components/DevelopmentBadge";
+import { ProjectGalleryLayout } from "@/components/ProjectGalleryLayout";
+import { EXTERNAL_LINK_PROPS } from "@/lib/externalLink";
 
 type Props = {
   project: Project;
@@ -16,6 +19,7 @@ export function FeaturedCase({ project, index, onOpen }: Props) {
   const { t } = useLanguage();
   const reversed = index % 2 === 1;
   const gallery = project.gallery?.slice(0, 3) ?? [];
+  const showGallery = project.showGalleryOnFeatured !== false && gallery.length > 1;
 
   return (
     <motion.article
@@ -38,20 +42,28 @@ export function FeaturedCase({ project, index, onOpen }: Props) {
             </span>
             <span className="w-1 h-1 rounded-full bg-black/15" />
             <span className="type-eyebrow">{project.year}</span>
+            {project.inDevelopment && <DevelopmentBadge accent={project.accent} />}
           </div>
 
           <h3
             className="font-display mb-4"
             style={{
-              fontWeight: 700,
               fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)",
               lineHeight: 1.05,
               letterSpacing: "-0.03em",
               color: INK,
-              maxWidth: "14ch",
+              maxWidth: project.titleLines ? "12ch" : "14ch",
             }}
           >
-            {project.title}
+            {project.titleLines ? (
+              <>
+                {project.titleLines[0]}
+                <br />
+                {project.titleLines[1]}
+              </>
+            ) : (
+              project.title
+            )}
           </h3>
 
           <p
@@ -63,26 +75,14 @@ export function FeaturedCase({ project, index, onOpen }: Props) {
 
           <ProjectLabels labels={project.labels} accent={project.accent} className="mb-6" />
 
-          <p
-            style={{
-              fontFamily: BODY,
-              fontSize: "0.98rem",
-              lineHeight: 1.75,
-              color: "rgba(14,14,14,0.58)",
-              maxWidth: "46ch",
-            }}
-          >
+          <p className="type-body mb-0" style={{ maxWidth: "46ch" }}>
             {project.story}
           </p>
 
           {project.highlight && (
             <p
-              className="mt-5"
+              className="type-body type-body-muted mt-5"
               style={{
-                fontFamily: BODY,
-                fontSize: "0.92rem",
-                lineHeight: 1.7,
-                color: "rgba(14,14,14,0.48)",
                 maxWidth: "44ch",
                 borderLeft: `2px solid ${project.accent}`,
                 paddingLeft: "1rem",
@@ -110,8 +110,14 @@ export function FeaturedCase({ project, index, onOpen }: Props) {
               {t.home.readCase}
             </Button>
             {project.url && (
-              <Button href={project.url} variant="ghost" size="sm">
-                {t.project.visitSite}
+              <Button
+                href={project.url}
+                variant="outline"
+                size="sm"
+                accent={project.accent}
+                {...EXTERNAL_LINK_PROPS}
+              >
+                {project.inDevelopment ? t.project.visitStaging : t.project.visitSite}
               </Button>
             )}
           </div>
@@ -147,29 +153,8 @@ export function FeaturedCase({ project, index, onOpen }: Props) {
             <div style={{ height: 2, background: project.accent }} />
           </div>
 
-          {gallery.length > 1 && (
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {gallery.slice(1).map((item, i) => (
-                <div
-                  key={`${item.alt}-${i}`}
-                  className={`overflow-hidden ${i === 1 ? "mt-4 sm:mt-8" : ""}`}
-                  style={{ background: item.bg ?? "#111" }}
-                >
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    loading="lazy"
-                    className="w-full block"
-                    style={{
-                      aspectRatio: item.aspect ?? "4/5",
-                      objectFit: item.fit ?? "cover",
-                      objectPosition: i === 0 ? "left center" : "center top",
-                      opacity: 0.9,
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
+          {showGallery && (
+            <ProjectGalleryLayout items={gallery.slice(1)} accent={project.accent} />
           )}
         </div>
       </div>

@@ -14,6 +14,7 @@ export type ProjectGalleryItem = {
 export type Project = {
   id: string;
   title: string;
+  titleLines?: [string, string];
   year: string;
   category: string;
   image: string;
@@ -28,6 +29,8 @@ export type Project = {
   url?: string;
   agency?: string;
   accent: string;
+  showGalleryOnFeatured?: boolean;
+  inDevelopment?: boolean;
   gallery?: ProjectGalleryItem[];
   client?: Client;
 };

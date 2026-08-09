@@ -7,10 +7,10 @@ export const ui = {
       back: "← Tilbage",
     },
     home: {
-      heroEyebrow: "Oliver Hanert",
-      heroTitle: "Frontendudvikler med blik for design og brugeroplevelse",
+      heroName: "Oliver Hanert",
+      heroTagline: "Frontendudvikler med blik for design og brugeroplevelse",
       heroBody:
-        "Jeg arbejder som frontendudvikler i København og trives bedst der, hvor design skal blive til et reelt produkt. Jeg bygger websites og platforme i WordPress og React og bruger meget af min energi på de små valg, der afgør, om en løsning bare fungerer – eller faktisk føles god at bruge.",
+        "Jeg arbejder som frontendudvikler i København og trives bedst der, hvor design skal blive til et reelt produkt. Jeg bygger websites og platforme i WordPress og React og bruger meget af min energi på de små valg, der afgør, om en løsning bare fungerer, eller faktisk føles god at bruge.",
       workTitle: "Det jeg arbejder med",
       workAreas: [
         "Frontendudvikling",
@@ -27,7 +27,7 @@ export const ui = {
       moreProjectsIntro: "Andre websites, platforme og kampagner jeg har været med til at bygge.",
       howIWorkTitle: "Sådan arbejder jeg",
       howIWorkBody:
-        "Jeg trives bedst i arbejdet mellem design og implementering, hvor idéer stadig kan udfordres og forbedres, før de bliver låst. Jeg går op i, at løsninger ikke bare fungerer teknisk, men også føles naturlige at bruge – især når indhold, struktur og detaljer skal spille sammen i den færdige oplevelse.",
+        "Jeg trives bedst i arbejdet mellem design og implementering, hvor idéer stadig kan udfordres og forbedres, før de bliver låst. Jeg går op i, at løsninger ikke bare fungerer teknisk, men også føles naturlige at bruge, især når indhold, struktur og detaljer skal spille sammen i den færdige oplevelse.",
       contactTitle: "Vil du høre mere om mit arbejde?",
       contactBody:
         "Jeg er altid åben for en god samtale om digitale produkter, frontend, design og nye muligheder. Skriv eller ring, hvis du vil høre mere om mit arbejde eller se flere cases.",
@@ -42,6 +42,9 @@ export const ui = {
     },
     project: {
       visitSite: "Besøg sitet",
+      visitStaging: "Se staging",
+      inDevelopment: "Under udvikling",
+      status: "Status",
       readCase: "Læs case",
       next: "Se næste",
       nextEyebrow: "Næste case",
@@ -89,10 +92,10 @@ export const ui = {
       back: "← Back",
     },
     home: {
-      heroEyebrow: "Oliver Hanert",
-      heroTitle: "Frontend developer with an eye for design and user experience",
+      heroName: "Oliver Hanert",
+      heroTagline: "Frontend developer with an eye for design and user experience",
       heroBody:
-        "I work as a frontend developer in Copenhagen and do my best work where design becomes a real product. I build websites and platforms in WordPress and React, and I spend much of my energy on the small choices that decide whether a solution merely works — or actually feels good to use.",
+        "I work as a frontend developer in Copenhagen and do my best work where design becomes a real product. I build websites and platforms in WordPress and React, and I spend much of my energy on the small choices that decide whether a solution merely works, or actually feels good to use.",
       workTitle: "What I work with",
       workAreas: [
         "Front-end development",
@@ -109,7 +112,7 @@ export const ui = {
       moreProjectsIntro: "Other websites, platforms and campaigns I have helped build.",
       howIWorkTitle: "How I work",
       howIWorkBody:
-        "I thrive in the space between design and implementation, where ideas can still be challenged and improved before they are locked in. I care that solutions do not only work technically, but also feel natural to use — especially when content, structure and detail must come together in the finished experience.",
+        "I thrive in the space between design and implementation, where ideas can still be challenged and improved before they are locked in. I care that solutions do not only work technically, but also feel natural to use, especially when content, structure and detail must come together in the finished experience.",
       contactTitle: "Want to hear more about my work?",
       contactBody:
         "I am always open to a good conversation about digital products, front-end, design and new opportunities. Write or call if you want to hear more about my work or see more cases.",
@@ -124,6 +127,9 @@ export const ui = {
     },
     project: {
       visitSite: "Visit site",
+      visitStaging: "View staging",
+      inDevelopment: "In development",
+      status: "Status",
       readCase: "Read case",
       next: "Next project",
       nextEyebrow: "Next case",

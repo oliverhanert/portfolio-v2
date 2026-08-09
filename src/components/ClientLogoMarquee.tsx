@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { CLIENTS, type Client } from "@/data/clients";
-import { DISPLAY } from "@/lib/constants";
 
 function MarqueeLogo({ client }: { client: Client }) {
   const [imgFailed, setImgFailed] = useState(false);
@@ -24,11 +23,9 @@ function MarqueeLogo({ client }: { client: Client }) {
         />
       ) : (
         <span
-          className="text-center uppercase"
+          className="text-center uppercase font-display"
           style={{
-            fontFamily: DISPLAY,
             fontSize: 11,
-            fontWeight: 700,
             letterSpacing: "0.06em",
             color: "#0e0e0e",
           }}
