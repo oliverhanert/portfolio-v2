@@ -9,9 +9,9 @@ export const FUNBOX_PINK = "#EC008C";
 export const SITE = {
   url: "https://oliverhanert.dk",
   name: "Oliver Hanert",
-  title: "Oliver Hanert · Frontend-udvikler & digital designer",
+  title: "Oliver Hanert · Frontendudvikler med blik for design",
   description:
-    "Portfolio for Oliver Hanert. Frontend-udvikler og digital designer i København. Websites, platforme og digitale produkter for organisationer og brands.",
+    "Portfolio for Oliver Hanert. Frontendudvikler i København med stærkt blik for design, brugeroplevelse og indholdstunge digitale platforme.",
   email: "o.hanert@gmail.com",
   phone: "+45 60810660",
   linkedin: "https://linkedin.com/in/oliverhanert/",

@@ -149,6 +149,17 @@ export function ContactsPage() {
           >
             {t.contacts.roleLine}
           </p>
+          <p
+            className="mt-8 type-body"
+            style={{
+              fontSize: "clamp(0.95rem, 1.5vw, 1.05rem)",
+              lineHeight: 1.75,
+              maxWidth: "42ch",
+              color: "rgba(250,249,247,0.55)",
+            }}
+          >
+            {t.contacts.intro}
+          </p>
         </motion.div>
 
         <motion.section

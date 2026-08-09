@@ -25,8 +25,47 @@ export type ProjectBase = {
   url?: string;
   agency?: string;
   accent: string;
+  featured?: boolean;
   gallery?: ProjectGalleryItem[];
 };
+
+export const FEATURED_PROJECT_IDS = ["002", "007", "004", "014"] as const;
+
+export const SECONDARY_PROJECT_IDS = [
+  "001",
+  "003",
+  "005",
+  "008",
+  "009",
+  "010",
+  "011",
+  "012",
+  "013",
+  "015",
+  "016",
+  "017",
+] as const;
+
+function caseGallery(hero: string, title: string): ProjectGalleryItem[] {
+  return [
+    { src: hero, alt: `${title} — overblik`, aspect: "16/9", wide: true },
+    {
+      src: hero,
+      alt: `${title} — detalje`,
+      aspect: "4/5",
+      fit: "cover",
+      offset: "right",
+      wide: false,
+    },
+    {
+      src: hero,
+      alt: `${title} — mobil`,
+      aspect: "9/16",
+      fit: "cover",
+      wide: false,
+    },
+  ];
+}
 
 export const PROJECTS_BASE: ProjectBase[] = [
   {
@@ -48,6 +87,8 @@ export const PROJECTS_BASE: ProjectBase[] = [
     agency: "Peytz & Co.",
     url: "https://folkeskolen.dk",
     accent: "#b91c1c",
+    featured: true,
+    gallery: caseGallery(img002, "Folkeskolen"),
   },
   {
     id: "003",
@@ -68,6 +109,8 @@ export const PROJECTS_BASE: ProjectBase[] = [
     agency: "Peytz & Co.",
     url: "https://kf.wp.prod.combell.peytz.dk",
     accent: "#374151",
+    featured: true,
+    gallery: caseGallery(img004, "Konstruktørforeningen"),
   },
   {
     id: "005",
@@ -88,6 +131,8 @@ export const PROJECTS_BASE: ProjectBase[] = [
     agency: "Peytz & Co.",
     url: "https://diabetes.wp.prod.combell.peytz.dk",
     accent: "#0369a1",
+    featured: true,
+    gallery: caseGallery(img007, "Diabetesforeningen"),
   },
   {
     id: "008",
@@ -156,6 +201,8 @@ export const PROJECTS_BASE: ProjectBase[] = [
     agency: "Kathart",
     url: "https://vaerdibyg.dk",
     accent: "#ca8a04",
+    featured: true,
+    gallery: caseGallery(img014, "Værdibyg"),
   },
   {
     id: "015",

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "@/components/Button";
+import { ProjectLabels } from "@/components/ProjectLabels";
 import { ClientLogo } from "@/components/ClientLogo";
 import { storyExcerpt } from "@/data/projects";
 import type { Project } from "@/data/types";
@@ -185,8 +186,12 @@ export function ProjectDrawer({ project, onClose }: Props) {
                   >
                     {project.title}
                   </h2>
+                  <p className="type-tagline mb-4" style={{ fontSize: 14, maxWidth: "none", color: "rgba(14,14,14,0.55)" }}>
+                    {project.tagline}
+                  </p>
+                  <ProjectLabels labels={project.labels} accent={project.accent} className="mb-4" />
                   <p className="type-body" style={{ fontSize: 14, maxWidth: "none" }}>
-                    {storyExcerpt(project.story, 160)}
+                    {storyExcerpt(project.story, 200)}
                   </p>
                 </div>
               </div>

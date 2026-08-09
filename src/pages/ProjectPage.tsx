@@ -4,6 +4,7 @@ import { TopBar } from "@/components/TopBar";
 import { ProjectMeta } from "@/components/ProjectMeta";
 import { ClientLogo } from "@/components/ClientLogo";
 import { ProjectGallery } from "@/components/ProjectGallery";
+import { ProjectLabels } from "@/components/ProjectLabels";
 import { NextProjectSection } from "@/components/NextProjectSection";
 import { StoryParagraphs, FadeUp } from "@/components/motion";
 import { heroImageUrl, useProjects } from "@/data/projects";
@@ -74,7 +75,10 @@ export function ProjectPage() {
             <h1 className="type-title mb-5">{project.title}</h1>
           </FadeUp>
           <FadeUp delay={0.16}>
-            <p className="type-tagline">{project.tagline}</p>
+            <p className="type-tagline mb-6">{project.tagline}</p>
+          </FadeUp>
+          <FadeUp delay={0.2}>
+            <ProjectLabels labels={project.labels} accent={project.accent} />
           </FadeUp>
         </div>
       </header>
@@ -154,6 +158,23 @@ export function ProjectPage() {
           </FadeUp>
 
           <StoryParagraphs text={project.story} />
+          {project.highlight && (
+            <FadeUp className="mt-8">
+              <p
+                className="type-body"
+                style={{
+                  fontSize: "1.02rem",
+                  lineHeight: 1.75,
+                  color: "rgba(14,14,14,0.52)",
+                  maxWidth: "52ch",
+                  borderLeft: `2px solid ${project.accent}`,
+                  paddingLeft: "1.1rem",
+                }}
+              >
+                {project.highlight}
+              </p>
+            </FadeUp>
+          )}
         </div>
       </div>
 

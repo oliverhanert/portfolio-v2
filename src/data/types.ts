@@ -20,7 +20,10 @@ export type Project = {
   imageAlt: string;
   tagline: string;
   story: string;
+  highlight?: string;
   role: string;
+  labels: string[];
+  featured: boolean;
   tech: string[];
   url?: string;
   agency?: string;

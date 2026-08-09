@@ -4,7 +4,9 @@ export type ProjectCopy = {
   title: string;
   tagline: string;
   story: string;
+  highlight?: string;
   role: string;
+  labels: string[];
   imageAlt: string;
 };
 
@@ -12,260 +14,300 @@ export const projectContent: Record<Locale, Record<string, ProjectCopy>> = {
   da: {
     "001": {
       title: "DTU Science Park",
-      tagline: "Nyt website i forbindelse med rebrand og ny visuel identitet.",
+      tagline: "Nyt website udviklet som del af et rebrand og en ny visuel identitet.",
       story:
-        "I 2023 fik jeg muligheden for at lave et af mine mest komplekse projekter: DTU Science Parks nye hjemmeside. De havde netop skiftet visuel identitet, og behovet for en moderne og levende hjemmeside var en naturlig del af den transformation.\n\nSammen med DTUs interne designere og kommunikationsteam byggede jeg løsningen i WordPress og Elementor. Det krævede specialbyggede moduler, blandt andet en billedkarusel med thumbnails til udlejningsmål, flersproget opsætning med WPML, HubSpot-integration på formularer og custom JavaScript til deeplinks i tabs-sektioner.\n\nEt projekt hvor jeg fik brugt hele værktøjskassen. Løsningen lever stadig i produktion.",
+        "DTU Science Park skulle have en hjemmeside, der matchede en ny visuel identitet og kunne håndtere komplekst indhold, flersprogethed og specialbyggede moduler. Jeg udviklede løsningen i WordPress med fokus på struktur, performance og en oplevelse, der føltes moderne uden at miste faglig tyngde.",
       role: "Webudvikler",
+      labels: ["WordPress", "Frontend", "Rebrand"],
       imageAlt: "DTU Science Park forsiden",
     },
     "002": {
       title: "Folkeskolen",
-      tagline: "Løbende blokudvikling og design på et nationalt fagmedie.",
+      tagline: "Løbende udvikling og designnære forbedringer på et nationalt fagmedie.",
       story:
-        "Folkeskolen er Danmarks fagmedie for lærere og pædagoger. Platformen håndterer enorme mængder indhold, kompleks taksonomi og mange brugertyper, og den skal fungere i en travl hverdag.\n\nJeg arbejder løbende som frontend-udvikler hos Peytz & Co. med udvikling af blokke i React og Next.js, samt designopgaver på tværs af artikler, sektioner og flows. GraphQL er datalaget bag det hele.\n\nDet er arbejde der kræver disciplin i struktur og ydeevne. Ikke glamour, men vigtigt.",
+        "Folkeskolen er et indholdstungt digitalt produkt med høje krav til læsbarhed, struktur og overblik. Jeg arbejdede med løbende frontendudvikling og forbedringer af moduler og indholdskomponenter med fokus på, at nye elementer skulle fungere godt både visuelt, redaktionelt og responsivt. Det er en type projekt, jeg trives i, fordi detaljerne i layout, hierarki og spacing har stor betydning for den samlede brugeroplevelse.",
+      highlight:
+        "Det er et projekt, der viser den type arbejde, jeg især motiveres af: at forbedre en eksisterende digital løsning med respekt for både indholdet, brugeren og den tekniske virkelighed.",
       role: "Frontend-udvikler",
+      labels: ["Frontend", "Platform", "Indholdsstruktur", "React"],
       imageAlt: "Folkeskolen forsiden",
     },
     "003": {
       title: "Profil Rejser",
-      tagline: "Løbende udvikling for Profil Rejser og Bella Vista.",
+      tagline: "Løbende udvikling og forbedringer på tværs af indhold, funktioner og brugerrejser.",
       story:
-        "Profil Rejser og Bella Vista arrangerer gruppe- og studierejser. Jeg arbejder løbende med front-end, kode og design på begge brands, fra destinationssider og bookingflows til det visuelle udtryk på tværs af platformene.\n\nArbejdet foregår i React og TypeScript på en Umbraco-backend. Det handler om at holde to brands sammenhængende visuelt, samtidig med at booking og rejseindhold skal være let at finde og vedligeholde.\n\nEt langvarigt samarbejde, hvor både kode og UI udvikles i takt med kundens behov.",
+        "Profil Rejser og Bella Vista kræver en platform, hvor booking, destinationer og brandudtryk hænger sammen på tværs af to brands. Jeg arbejder løbende med frontend, UI og forbedringer af flows i React og TypeScript — med særligt fokus på, at rejseindhold skal være let at finde og vedligeholde.",
       role: "Frontend-udvikler & UI-designer",
+      labels: ["Frontend", "React", "Designimplementering"],
       imageAlt: "Profil Rejser forsiden",
     },
     "004": {
       title: "Konstruktørforeningen",
-      tagline: "Hjemmeside og medlemsplatform for ingeniør-fagforeningen.",
+      tagline: "Hjemmeside og medlemsplatform med fokus på struktur, funktion og overblik.",
       story:
-        "Konstruktørforeningen er fagforeningen for konstruktører og bygningsingeniører i Danmark. De skulle have en digital platform der kommunikerer faglig tyngde. Professionelt og troværdigt, men ikke støvet.\n\nJeg byggede front-end i React og TypeScript på Umbraco. Arbejdet omfattede medlemsflows, redaktionelle skabeloner og et designsystem af komponenter der skalerer, når foreningen publicerer nyt indhold.\n\nMålet var et site medlemmene faktisk gider bruge, og som redaktionen kan vedligeholde uden friktion.",
+        "Konstruktørforeningen var en løsning, hvor information, medlemsfunktioner og brugeroplevelse skulle spille sammen. Jeg arbejdede med frontend og den konkrete realisering af løsningen med fokus på, at både indhold og funktionalitet stod tydeligt frem på tværs af skærmstørrelser. Projektet viser godt den type opgaver, hvor struktur og praktisk brugbarhed er mindst lige så vigtige som det visuelle udtryk.",
       role: "Frontend-udvikler",
+      labels: ["Frontend", "Platform", "Medlemsplatform", "React"],
       imageAlt: "Konstruktørforeningen forsiden",
     },
     "005": {
       title: "Pulsen Gymnasium",
-      tagline: "Digital tilstedeværelse for et nyt sportsgymnasium.",
+      tagline: "Digital identitet og website for et nyt sportsgymnasium.",
       story:
-        "Pulsen er et sportsgymnasium med høje ambitioner. Siden skulle ikke bare informere om uddannelser og optag. Den skulle tiltrække kommende elever og formidle skolens energi og identitet.\n\nJeg udviklede front-end og bidrog med digitalt design i React og TypeScript på Umbraco. Farver, typografi og layouts skulle afspejle et ungt, ambitiøst miljø, ikke et generisk skoleskabelon.\n\nEt projekt hvor æstetik og funktion gik hånd i hånd fra start.",
+        "Pulsen skulle have en digital tilstedeværelse, der formidlede skolens energi og identitet — ikke bare information om uddannelser. Jeg udviklede frontend og bidrog med digitalt design i React og TypeScript, hvor farver, typografi og layouts skulle føles unge og ambitiøse.",
       role: "Frontend-udvikler & digital designer",
+      labels: ["Frontend", "Designimplementering", "Brand"],
       imageAlt: "Interiør på Pulsen Gymnasium med grafik og stemningsbilleder",
     },
     "007": {
       title: "Diabetes\u00ADforeningen",
-      tagline: "Nyt website med tilgængelighed og varm tone.",
+      tagline: "Nyt website med fokus på tilgængelighed, tydelighed og en varm digital tone.",
       story:
-        "Diabetesforeningen skulle have en ny hjemmeside der gør sundhedsinformation forståelig for alle. Fra nydiagnosticerede til pårørende og sundhedsprofessionelle.\n\nJeg udviklede front-end og UI med WCAG 2.1 AA som integreret del af arbejdet: kontrast, tastaturnavigation, semantisk HTML og skabeloner der fungerer for alle brugere. Det visuelle udtryk skulle være varmt og troværdigt, ikke klinisk.\n\nEt projekt hvor hvert valg tæller, fordi indholdet møder mennesker i alle slags livssituationer.",
-      role: "Frontend-udvikler & UI-designer",
+        "Jeg arbejdede med frontendimplementering og den designnære omsætning af løsningen til et færdigt website. Her var det vigtigt at balancere et imødekommende visuelt udtryk med tydelig struktur, god læsbarhed og en løsning, der fungerer for mange forskellige brugere. Projektet er med, fordi det viser den type arbejde, hvor oplevelse, indhold og tilgængelighed skal hænge tæt sammen.",
+      highlight:
+        "Når målgruppen er bred, bliver detaljer som kontraster, typografi, spacing og tydelige næste skridt ekstra vigtige.",
+      role: "Frontend-udvikler & designimplementering",
+      labels: ["Frontend", "Designimplementering", "Tilgængelighed", "React"],
       imageAlt: "Diabetesforeningen forsiden",
     },
     "008": {
       title: "Gigtforeningen",
-      tagline: "Redesign for en patientorganisation med varm tone.",
+      tagline: "Redesign med fokus på varme, tydelighed og en tryg brugeroplevelse.",
       story:
-        "Gigtforeningen repræsenterer mennesker med gigt og reumatiske sygdomme. Deres nye site skulle føles nært og menneskeligt, men stadig bære en patientorganisations faglige tyngde.\n\nJeg byggede front-end i React og TypeScript med fokus på overskuelig navigation, genkendelige skabeloner og et udtryk der møder brugerne der, hvor de er. Redaktionen skulle kunne publicere artikler, råd og kampagner uden at bryde designet.\n\nBalancen mellem professionelt og personligt var hele pointen.",
+        "Gigtforeningen skulle have et site, der føltes nært og menneskeligt uden at miste faglig tyngde. Jeg byggede frontend i React med fokus på overskuelig navigation, genkendelige skabeloner og et udtryk, der møder brugerne der, hvor de er.",
       role: "Frontend-udvikler",
+      labels: ["Frontend", "Redesign", "Patientorganisation"],
       imageAlt: "Gigtforeningen forsiden",
     },
     "009": {
       title: "Scleroseforeningen",
-      tagline: "Tilgængelig platform for en bred målgruppe.",
+      tagline: "Tilgængelig og overskuelig platform for en bred målgruppe.",
       story:
-        "Scleroseforeningen støtter mennesker med MS og deres pårørende. Siden skal fungere for en meget bred målgruppe, fra nydiagnosticerede i krise til sundhedsprofessionelle der skal finde faglig dokumentation hurtigt.\n\nJeg udviklede front-end med tilgængelighed, klar informationshierarki og forskellige indgangspunkter for medlemmer, frivillige og professionelle. WCAG var en forudsætning fra dag ét, ikke et tjekpunkt til sidst.\n\nStruktur og omhu i hvert komponentvalg.",
+        "Scleroseforeningen skulle fungere for en meget bred målgruppe — fra nydiagnosticerede til sundhedsprofessionelle. Jeg udviklede frontend med tilgængelighed, klart informationshierarki og forskellige indgangspunkter for medlemmer, frivillige og professionelle.",
       role: "Frontend-udvikler",
+      labels: ["Frontend", "Tilgængelighed", "Platform"],
       imageAlt: "Scleroseforeningen forsiden",
     },
     "010": {
       title: "AFTRYK · Mary Fonden",
-      tagline: "Kampagnesite præsenteret ved lancering med H.M. Dronningen.",
+      tagline: "Kampagnesite udviklet til en lancering med stor offentlig synlighed.",
       story:
-        "De unge sætter høje krav til sig selv, når de skal finde sig til rette i nye fællesskaber. Det var udgangspunktet for AFTRYK, et kampagnesite jeg udviklede i samarbejde med Mary Fonden.\n\nLøsningen er bygget i WordPress med Greenshift og GSAP. Siten er opbygget af vektor-baggrunde og scroll-baserede animationer, der skaber en rød tråd gennem kampagnen. Projektet blev præsenteret ved lanceringseventet i november 2024.\n\nEt projekt hvor design, animation og teknisk execution skulle hænge sammen fra start.",
+        "AFTRYK var et kampagnesite, hvor design, animation og teknisk execution skulle hænge sammen fra start. Jeg udviklede løsningen i WordPress med scroll-baserede animationer og et visuelt udtryk, der skulle bære en vigtig samfundsag.",
       role: "Webudvikler",
+      labels: ["WordPress", "Kampagne", "Animation"],
       imageAlt: "AFTRYK kampagnesite for Mary Fonden",
     },
     "011": {
       title: "Visit Greenland",
-      tagline: "Nyt website og rebranding for Grønlands turistorganisation.",
+      tagline: "Website udviklet som del af en ny digital og visuel retning.",
       story:
-        "Visit Greenland skulle have et nyt website som del af et rebrand. Platformen skal inspirere til rejser, formidle praktisk information og fungere på tværs af sprog, med billeder i centrum.\n\nJeg arbejdede med både front-end udvikling og digitalt design: destinationssider, billedtunge layouts og en struktur der lader Grønland tale for sig selv. Teknikken måtte ikke komme i vejen for det visuelle.\n\nPerformance og visuel impact skulle gå hånd i hånd.",
+        "Visit Greenland skulle have et website, der inspirerede til rejser og formidlede praktisk information på tværs af sprog. Jeg arbejdede med frontend og digitalt design — billedtunge layouts og en struktur, der lod Grønland tale for sig selv.",
       role: "Frontend-udvikler & digital designer",
+      labels: ["Frontend", "Turisme", "Rebrand"],
       imageAlt: "Visit Greenland forsiden",
     },
     "012": {
       title: "Enhedslisten",
-      tagline: "Kampagnesite klar til Europa-Parlamentsvalget 2024.",
+      tagline: "Kampagnesite udviklet til Europa-Parlamentsvalget 2024.",
       story:
-        "I samarbejde med Enhedslistens interne designere og marketingsteam udviklede jeg deres nye hjemmeside i 2023. I første omgang som kampagnesite til Europa-Parlamentsvalget 2024.\n\nJeg byggede hele sitet i WordPress med custom tema, JavaScript og CSS hos Kathart. Løsningen har en række features klar under overfladen, blandt andet en interaktiv politisk ordbog, donationssystem og minimalistiske videnssider.\n\nTempo, klare prioriteter og tæt samarbejde med kundens team.",
+        "Enhedslistens kampagnesite skulle være klar til valgkamp under tidspres. Jeg byggede hele sitet i WordPress med custom tema og JavaScript i tæt samarbejde med kundens design- og marketingteam.",
       role: "Webudvikler",
+      labels: ["WordPress", "Kampagne", "Frontend"],
       imageAlt: "Enhedslisten forsiden",
     },
     "013": {
       title: "Royal Arctic Line",
-      tagline: "Hjemmeside med ruter, fragt og booking.",
+      tagline: "Platform med fokus på struktur, funktionalitet og adgang til information.",
       story:
-        "Royal Arctic Line sejler gods og passagerer til og fra Grønland. Hjemmesiden skulle vise rutedata, fragttider og bookinginformation der stemmer overens med virkeligheden, ikke bare se godt ud.\n\nJeg byggede sitet i WordPress og lavede custom integrationer til ruter, fragt og booking via REST API. Udover udvikling tog jeg løbende designopgaver: grafik, materiale og opdateringer i tæt samarbejde med kunden.\n\nKomplekst domæne og mange brugergrupper. Et projekt man vokser af.",
+        "Royal Arctic Line skulle vise rutedata, fragt og bookinginformation, der stemmer overens med virkeligheden. Jeg byggede sitet i WordPress med custom integrationer og løbende designopgaver i tæt samarbejde med kunden.",
       role: "Webudvikler & digital designer",
+      labels: ["WordPress", "Platform", "Integration"],
       imageAlt: "Royal Arctic Line forsiden",
     },
     "014": {
       title: "Værdibyg",
-      tagline: "Vidensbank for hele byggesektoren.",
+      tagline: "Vidensplatform med fokus på læsbarhed, struktur og adgang til indhold.",
       story:
-        "Værdibyg er byggeriets fælles vidensplatform. De samler vejledninger, metoder og anbefalinger på tværs af hele byggesektoren, og min hovedopgave var vidensbanken.\n\nJeg byggede den i WordPress med custom Gutenberg-blokke: struktureret fagindhold, søgning, filtrering og et setup der gør et teksttungt univers overskueligt for dem der bruger det dagligt. Derudover løbende designopgaver på tværs af platformen.\n\nForståelse for brugerens hverdag er lige så vigtig som koden her.",
+        "På Værdibyg arbejdede jeg med frontend og implementering på en platform, hvor informationsarkitektur og præsentation er afgørende. Her handlede det om at skabe ro, tydelighed og et layout, der gør det lettere for brugeren at orientere sig i komplekst indhold. Jeg har valgt projektet, fordi det viser min interesse for løsninger, hvor indhold, struktur og interface skal spille naturligt sammen.",
       role: "Webudvikler & digital designer",
+      labels: ["Frontend", "WordPress", "Indholdsstruktur", "Platform"],
       imageAlt: "Værdibyg forsiden",
     },
     "015": {
       title: "Holdet.dk",
-      tagline: "Kampagnesider, SoMe og motion graphics til fodboldspil.",
+      tagline: "Kampagnesider, grafik og motion design til digitale kampagner og sociale medier.",
       story:
-        "Hos Holdet.dk og Swush arbejdede jeg som digital designer og indholdsansvarlig. Det handlede om at bygge kampagnesider, lave grafik til nyhedsbreve og SoMe, skrive indhold til blogs og producere animationer til annoncering.\n\nJeg arbejdede i WordPress med CSS/SCSS og GraphQL, og lærte at arbejde hurtigt i et produktteam hvor design, indhold og udgivelse hænger tæt sammen.\n\nEt godt sted at lære tempo og samspillet mellem design og marketing.",
+        "Hos Holdet.dk arbejdede jeg som digital designer og indholdsansvarlig med kampagnesider, SoMe-grafik, nyhedsbreve og motion graphics til annoncering — i et tempo, hvor design og udgivelse hænger tæt sammen.",
       role: "Digital designer",
+      labels: ["Digital design", "Kampagne", "Motion"],
       imageAlt: "Holdet.dk kampagneside",
     },
     "016": {
       title: "Bjørn Parfume",
-      tagline: "Webshop og kampagneside til dansk parfumebrand.",
+      tagline: "Webshop og kampagneside med fokus på visuel identitet og digitalt udtryk.",
       story:
-        "Bjørn Parfume skulle have en digital tilstedeværelse der matcher produktets kvalitet. Jeg byggede webshop og kampagnesider i WordPress med Greenshift og custom CSS, og arbejdede tæt på det visuelle udtryk.\n\nProjektet kombinerede e-commerce, storytelling og et skarpt visuelt hierarki. Det var et af de første projekter hvor jeg selv stod for både udvikling og det digitale design fra start til slut.\n\nEnkelt i scope, men godt til at finpudse detaljerne.",
+        "Bjørn Parfume skulle have en digital tilstedeværelse, der matchede produktets kvalitet. Jeg byggede webshop og kampagnesider i WordPress med fokus på visuelt hierarki, storytelling og et skarpt digitalt udtryk.",
       role: "Webudvikler & digital designer",
+      labels: ["WordPress", "Webshop", "Design"],
       imageAlt: "Bjørn Parfume webshop",
     },
     "017": {
       title: "Skills4Reuse",
-      tagline: "Hjemmeside for europæisk genbrugsinitiativ.",
+      tagline: "Website for et europæisk initiativ med fokus på formidling og struktur.",
       story:
-        "Skills4Reuse er et projekt under Norion der formidler viden om genbrug og cirkulær økonomi. Jeg designede og udviklede hjemmesiden i GoBasic med custom CSS, JavaScript og illustrationer lavet i Illustrator.\n\nSitet skulle gøre et komplekst fagligt emne tilgængeligt for flere målgrupper, uden at det blev tungt at navigere i.\n\nEt tidligt projekt hvor jeg lærte at oversætte indhold til et klart visuelt sprog.",
+        "Skills4Reuse skulle gøre et komplekst fagligt emne tilgængeligt uden at blive tungt at navigere i. Jeg designede og udviklede hjemmesiden med custom CSS, JavaScript og illustrationer.",
       role: "Webudvikler & designer",
+      labels: ["Website", "Formidling", "Design"],
       imageAlt: "Skills4Reuse forsiden",
     },
   },
   en: {
     "001": {
       title: "DTU Science Park",
-      tagline: "New website as part of a rebrand and new visual identity.",
+      tagline: "New website developed as part of a rebrand and new visual identity.",
       story:
-        "In 2023 I got the chance to work on one of my most complex projects: DTU Science Park's new website. They had just changed their visual identity, and a modern, lively website was a natural part of that transformation.\n\nTogether with DTU's internal designers and communications team, I built the solution in WordPress and Elementor. It required custom modules, including an image carousel with thumbnails for rental properties, multilingual setup with WPML, HubSpot integration on forms and custom JavaScript for deeplinks in tab sections.\n\nA project where I used the full toolbox. The solution is still running in production.",
+        "DTU Science Park needed a website that matched a new visual identity and could handle complex content, multilingual setup and custom modules. I built the solution in WordPress with a focus on structure, performance and an experience that felt modern without losing professional weight.",
       role: "Web developer",
+      labels: ["WordPress", "Frontend", "Rebrand"],
       imageAlt: "DTU Science Park homepage",
     },
     "002": {
       title: "Folkeskolen",
-      tagline: "Ongoing block development and design for a national trade media site.",
+      tagline: "Ongoing development and design-adjacent improvements on a national trade media product.",
       story:
-        "Folkeskolen is Denmark's trade media for teachers and pedagogues. The platform handles huge volumes of content, complex taxonomy and many user types, and it has to work in a busy everyday setting.\n\nI work ongoing as a frontend developer at Peytz & Co. on React and Next.js blocks, plus design tasks across articles, sections and flows. GraphQL is the data layer behind it all.\n\nIt is the kind of work that demands discipline in structure and performance. Not glamorous, but important.",
+        "Folkeskolen is a content-heavy digital product with high demands for readability, structure and overview. I worked on ongoing front-end development and improvements to modules and content components, making sure new elements worked well visually, editorially and responsively. It is the kind of project I thrive in, because details in layout, hierarchy and spacing matter greatly to the overall user experience.",
+      highlight:
+        "It shows the type of work I am especially motivated by: improving an existing digital solution with respect for content, users and technical reality.",
       role: "Frontend developer",
+      labels: ["Frontend", "Platform", "Content structure", "React"],
       imageAlt: "Folkeskolen homepage",
     },
     "003": {
       title: "Profil Rejser",
-      tagline: "Ongoing development for Profil Rejser and Bella Vista.",
+      tagline: "Ongoing development and improvements across content, features and user journeys.",
       story:
-        "Profil Rejser and Bella Vista organise group and study trips. I work ongoing on front-end, code and design for both brands, from destination pages and booking flows to the visual expression across the platforms.\n\nThe work happens in React and TypeScript on an Umbraco backend. It is about keeping two brands visually coherent while booking and travel content stays easy to find and maintain.\n\nA long-term collaboration where both code and UI evolve with the client's needs.",
+        "Profil Rejser and Bella Vista need a platform where booking, destinations and brand expression work together across two brands. I work ongoing on front-end, UI and flow improvements in React and TypeScript — with a focus on travel content that is easy to find and maintain.",
       role: "Frontend developer & UI designer",
+      labels: ["Frontend", "React", "Design implementation"],
       imageAlt: "Profil Rejser homepage",
     },
     "004": {
       title: "Konstruktørforeningen",
-      tagline: "Website and membership platform for the engineering union.",
+      tagline: "Website and membership platform focused on structure, function and overview.",
       story:
-        "Konstruktørforeningen is the union for construction engineers and building engineers in Denmark. They needed a digital platform that communicates professional weight. Credible and serious, but not dusty.\n\nI built the front-end in React and TypeScript on Umbraco. The work covered membership flows, editorial templates and a component system that scales as the organisation publishes new content.\n\nThe goal was a site members actually want to use, and that editors can maintain without friction.",
+        "Konstruktørforeningen was a solution where information, membership features and user experience had to work together. I worked on the front-end and the concrete realisation of the solution, making sure content and functionality were clear across screen sizes. The project shows tasks where structure and practical usability are at least as important as visual expression.",
       role: "Frontend developer",
+      labels: ["Frontend", "Platform", "Membership", "React"],
       imageAlt: "Konstruktørforeningen homepage",
     },
     "005": {
       title: "Pulsen Gymnasium",
-      tagline: "Digital presence for a new sports high school.",
+      tagline: "Digital identity and website for a new sports high school.",
       story:
-        "Pulsen is a sports high school with high ambitions. The site had to do more than inform about programmes and admissions. It had to attract future students and convey the school's energy and identity.\n\nI developed the front-end and contributed digital design in React and TypeScript on Umbraco. Colours, typography and layouts had to reflect a young, ambitious environment, not a generic school template.\n\nA project where aesthetics and function went hand in hand from the start.",
+        "Pulsen needed a digital presence that conveyed the school's energy and identity — not just programme information. I developed the front-end and contributed digital design in React and TypeScript, where colour, typography and layouts had to feel young and ambitious.",
       role: "Frontend developer & digital designer",
-      imageAlt: "Interior at Pulsen Gymnasium with graphics and atmosphere photography",
+      labels: ["Frontend", "Design implementation", "Brand"],
+      imageAlt: "Interior at Pulsen Gymnasium",
     },
     "007": {
       title: "Diabetes\u00ADforeningen",
-      tagline: "New website with accessibility and a warm tone.",
+      tagline: "New website focused on accessibility, clarity and a warm digital tone.",
       story:
-        "Diabetesforeningen needed a new website that makes health information understandable for everyone. From the newly diagnosed to relatives and healthcare professionals.\n\nI developed the front-end and UI with WCAG 2.1 AA as an integrated part of the work: contrast, keyboard navigation, semantic HTML and templates that work for all users. The visual expression had to feel warm and trustworthy, not clinical.\n\nA project where every choice matters, because the content meets people in all kinds of life situations.",
-      role: "Frontend developer & UI designer",
+        "I worked on front-end implementation and the design-adjacent translation of the solution into a finished website. The challenge was balancing a welcoming visual expression with clear structure, good readability and a solution that works for many different users. The project is here because it shows work where experience, content and accessibility must hang closely together.",
+      highlight:
+        "When the audience is broad, details like contrast, typography, spacing and clear next steps become especially important.",
+      role: "Frontend developer & design implementation",
+      labels: ["Frontend", "Design implementation", "Accessibility", "React"],
       imageAlt: "Diabetesforeningen homepage",
     },
     "008": {
       title: "Gigtforeningen",
-      tagline: "Redesign for a patient organisation with a warm tone.",
+      tagline: "Redesign focused on warmth, clarity and a reassuring user experience.",
       story:
-        "Gigtforeningen represents people with arthritis and rheumatic diseases. Their new site had to feel close and human, while still carrying the professional weight of a patient organisation.\n\nI built the front-end in React and TypeScript with a focus on clear navigation, recognisable templates and an expression that meets users where they are. Editors needed to publish articles, advice and campaigns without breaking the design.\n\nThe balance between professional and personal was the whole point.",
+        "Gigtforeningen needed a site that felt close and human without losing professional weight. I built the front-end in React with a focus on clear navigation, recognisable templates and an expression that meets users where they are.",
       role: "Frontend developer",
+      labels: ["Frontend", "Redesign", "Patient organisation"],
       imageAlt: "Gigtforeningen homepage",
     },
     "009": {
       title: "Scleroseforeningen",
-      tagline: "Accessible platform for a broad audience.",
+      tagline: "Accessible and clear platform for a broad audience.",
       story:
-        "Scleroseforeningen supports people with MS and their relatives. The site has to work for a very broad audience, from the newly diagnosed in crisis to healthcare professionals who need to find documentation quickly.\n\nI developed the front-end with accessibility, clear information hierarchy and different entry points for members, volunteers and professionals. WCAG was a requirement from day one, not a checkbox at the end.\n\nStructure and care in every component choice.",
+        "Scleroseforeningen had to work for a very broad audience — from the newly diagnosed to healthcare professionals. I developed the front-end with accessibility, clear information hierarchy and different entry points for members, volunteers and professionals.",
       role: "Frontend developer",
+      labels: ["Frontend", "Accessibility", "Platform"],
       imageAlt: "Scleroseforeningen homepage",
     },
     "010": {
       title: "AFTRYK · Mary Fonden",
-      tagline: "Campaign site presented at launch with Her Majesty The Queen.",
+      tagline: "Campaign site developed for a launch with major public visibility.",
       story:
-        "Young people set high demands on themselves when they have to find their place in new communities. That was the starting point for AFTRYK, a campaign site I developed in collaboration with Mary Fonden.\n\nThe solution is built in WordPress with Greenshift and GSAP. The site is made up of vector backgrounds and scroll-based animations that create a visual thread through the campaign. The project was presented at the launch event in November 2024.\n\nA project where design, animation and technical execution had to work together from the start.",
+        "AFTRYK was a campaign site where design, animation and technical execution had to work together from the start. I built the solution in WordPress with scroll-based animations and a visual expression that had to carry an important social cause.",
       role: "Web developer",
+      labels: ["WordPress", "Campaign", "Animation"],
       imageAlt: "AFTRYK campaign site for Mary Fonden",
     },
     "011": {
       title: "Visit Greenland",
-      tagline: "New website and rebranding for Greenland's tourism organisation.",
+      tagline: "Website developed as part of a new digital and visual direction.",
       story:
-        "Visit Greenland needed a new website as part of a rebrand. The platform must inspire travel, convey practical information and work across languages, with imagery at the centre.\n\nI worked on both front-end development and digital design: destination pages, image-heavy layouts and a structure that lets Greenland speak for itself. The technology could not get in the way of the visual.\n\nPerformance and visual impact had to go hand in hand.",
+        "Visit Greenland needed a website that inspired travel and conveyed practical information across languages. I worked on front-end and digital design — image-heavy layouts and a structure that let Greenland speak for itself.",
       role: "Frontend developer & digital designer",
+      labels: ["Frontend", "Tourism", "Rebrand"],
       imageAlt: "Visit Greenland homepage",
     },
     "012": {
       title: "Enhedslisten",
-      tagline: "Campaign site ready for the 2024 European Parliament election.",
+      tagline: "Campaign site developed for the 2024 European Parliament election.",
       story:
-        "In collaboration with Enhedslisten's internal designers and marketing team, I developed their new website in 2023. Initially as a campaign site for the 2024 European Parliament election.\n\nI built the entire site in WordPress with a custom theme, JavaScript and CSS at Kathart. The solution has a range of features ready under the surface, including an interactive political dictionary, donation system and minimal knowledge pages.\n\nPace, clear priorities and close collaboration with the client's team.",
+        "Enhedslisten's campaign site had to be ready for an election under time pressure. I built the entire site in WordPress with a custom theme and JavaScript in close collaboration with the client's design and marketing team.",
       role: "Web developer",
+      labels: ["WordPress", "Campaign", "Frontend"],
       imageAlt: "Enhedslisten homepage",
     },
     "013": {
       title: "Royal Arctic Line",
-      tagline: "Website with routes, freight and booking.",
+      tagline: "Platform focused on structure, functionality and access to information.",
       story:
-        "Royal Arctic Line sails cargo and passengers to and from Greenland. The website had to show route data, freight times and booking information that matches reality, not just look good.\n\nI built the site in WordPress and created custom integrations for routes, freight and booking via REST API. Beyond development, I took ongoing design tasks: graphics, materials and updates in close collaboration with the client.\n\nComplex domain and many user groups. A project you grow from.",
+        "Royal Arctic Line had to show route data, freight and booking information that matches reality. I built the site in WordPress with custom integrations and ongoing design tasks in close collaboration with the client.",
       role: "Web developer & digital designer",
+      labels: ["WordPress", "Platform", "Integration"],
       imageAlt: "Royal Arctic Line homepage",
     },
     "014": {
       title: "Værdibyg",
-      tagline: "Knowledge bank for the entire construction sector.",
+      tagline: "Knowledge platform focused on readability, structure and access to content.",
       story:
-        "Værdibyg is the construction industry's shared knowledge platform. They gather guides, methods and recommendations across the entire sector, and my main task was the knowledge bank.\n\nI built it in WordPress with custom Gutenberg blocks: structured professional content, search, filtering and a setup that makes a text-heavy universe manageable for daily users. Plus ongoing design tasks across the platform.\n\nUnderstanding the user's everyday work is just as important as the code here.",
+        "At Værdibyg I worked on front-end and implementation on a platform where information architecture and presentation are decisive. The task was to create calm, clarity and a layout that makes it easier for users to navigate complex content. I chose the project because it shows my interest in solutions where content, structure and interface must work naturally together.",
       role: "Web developer & digital designer",
+      labels: ["Frontend", "WordPress", "Content structure", "Platform"],
       imageAlt: "Værdibyg homepage",
     },
     "015": {
       title: "Holdet.dk",
-      tagline: "Campaign pages, social media and motion graphics for a football game.",
+      tagline: "Campaign pages, graphics and motion design for digital campaigns and social media.",
       story:
-        "At Holdet.dk and Swush I worked as a digital designer and content lead. That meant building campaign pages, creating graphics for newsletters and social media, writing blog content and producing animations for advertising.\n\nI worked in WordPress with CSS/SCSS and GraphQL, and learned to move fast in a product team where design, content and publishing are tightly connected.\n\nA good place to learn pace and the interplay between design and marketing.",
+        "At Holdet.dk I worked as a digital designer and content lead on campaign pages, social graphics, newsletters and motion graphics for advertising — at a pace where design and publishing are tightly connected.",
       role: "Digital designer",
+      labels: ["Digital design", "Campaign", "Motion"],
       imageAlt: "Holdet.dk campaign page",
     },
     "016": {
       title: "Bjørn Parfume",
-      tagline: "Webshop and campaign site for a Danish perfume brand.",
+      tagline: "Webshop and campaign site focused on visual identity and digital expression.",
       story:
-        "Bjørn Parfume needed a digital presence that matched the quality of the product. I built the webshop and campaign pages in WordPress with Greenshift and custom CSS, working closely on the visual expression.\n\nThe project combined e-commerce, storytelling and a sharp visual hierarchy. It was one of the first projects where I handled both development and digital design from start to finish.\n\nSmall in scope, but good for refining the details.",
+        "Bjørn Parfume needed a digital presence that matched the quality of the product. I built the webshop and campaign pages in WordPress with a focus on visual hierarchy, storytelling and a sharp digital expression.",
       role: "Web developer & digital designer",
+      labels: ["WordPress", "Webshop", "Design"],
       imageAlt: "Bjørn Parfume webshop",
     },
     "017": {
       title: "Skills4Reuse",
-      tagline: "Website for a European reuse initiative.",
+      tagline: "Website for a European initiative focused on communication and structure.",
       story:
-        "Skills4Reuse is a Norion project that communicates knowledge about reuse and the circular economy. I designed and developed the website in GoBasic with custom CSS, JavaScript and illustrations made in Illustrator.\n\nThe site had to make a complex professional topic accessible to multiple audiences without becoming heavy to navigate.\n\nAn early project where I learned to translate content into a clear visual language.",
+        "Skills4Reuse had to make a complex professional topic accessible without becoming heavy to navigate. I designed and developed the website with custom CSS, JavaScript and illustrations.",
       role: "Web developer & designer",
+      labels: ["Website", "Communication", "Design"],
       imageAlt: "Skills4Reuse homepage",
     },
   },

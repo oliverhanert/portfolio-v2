@@ -7,18 +7,38 @@ export const ui = {
       back: "← Tilbage",
     },
     home: {
-      heroLines: [
-        "Webudvikler med passion for design.",
-        "Jeg er uddannet multimediedesigner og arbejder som frontend-udvikler i København. Jeg bygger websites og platforme i WordPress og React, og jeg stræber altid efter at skabe løsninger der både fungerer og føles rigtige.",
+      heroEyebrow: "Oliver Hanert",
+      heroTitle: "Frontendudvikler med blik for design og brugeroplevelse",
+      heroBody:
+        "Jeg arbejder som frontendudvikler i København og trives bedst der, hvor design skal blive til et reelt produkt. Jeg bygger websites og platforme i WordPress og React og bruger meget af min energi på de små valg, der afgør, om en løsning bare fungerer – eller faktisk føles god at bruge.",
+      workTitle: "Det jeg arbejder med",
+      workAreas: [
+        "Frontendudvikling",
+        "Figma og designimplementering",
+        "WordPress og React",
+        "AI i design-til-kode-workflows",
+        "Indholdstunge websites og platforme",
+        "Brugeroplevelse, struktur og detaljearbejde",
       ],
-      projectsLabel: "Projekter",
-      projectsIntro:
-        "Et udpluk af websites, platforme og kampagner jeg har været med til at bygge.",
-      cta: "Vil du høre mere?",
-      ctaButton: "Kontakt",
+      featuredLabel: "Udvalgte cases",
+      featuredIntro:
+        "Fire projekter, der viser, hvordan jeg arbejder med indhold, struktur, tilgængelighed og designimplementering i praksis.",
+      moreProjectsLabel: "Flere projekter",
+      moreProjectsIntro: "Andre websites, platforme og kampagner jeg har været med til at bygge.",
+      howIWorkTitle: "Sådan arbejder jeg",
+      howIWorkBody:
+        "Jeg trives bedst i arbejdet mellem design og implementering, hvor idéer stadig kan udfordres og forbedres, før de bliver låst. Jeg går op i, at løsninger ikke bare fungerer teknisk, men også føles naturlige at bruge – især når indhold, struktur og detaljer skal spille sammen i den færdige oplevelse.",
+      contactTitle: "Vil du høre mere om mit arbejde?",
+      contactBody:
+        "Jeg er altid åben for en god samtale om digitale produkter, frontend, design og nye muligheder. Skriv eller ring, hvis du vil høre mere om mit arbejde eller se flere cases.",
+      contactEmail: "E-mail",
+      contactPhone: "Telefon",
+      contactLinkedin: "LinkedIn",
       clientsTitle: "Kunder jeg har arbejdet med",
       funboxSticker: "Åbn Funbox",
       projectsKeyboardHint: "Brug ↑ ↓ og Enter til at navigere projekter",
+      readCase: "Læs case",
+      myRole: "Min rolle",
     },
     project: {
       visitSite: "Besøg sitet",
@@ -30,6 +50,7 @@ export const ui = {
       role: "Rolle",
       agency: "Bureau",
       stack: "Stack",
+      focus: "Fokus",
       close: "Luk",
       galleryTitle: "Billeder fra projektet",
     },
@@ -44,7 +65,9 @@ export const ui = {
     },
     contacts: {
       title: "Kontakt",
-      roleLine: "Digital designer & frontend-udvikler · Peytz & Co. · København",
+      intro:
+        "Jeg er altid åben for en god samtale om digitale produkter, frontend, design og nye muligheder. Skriv eller ring, hvis du vil høre mere om mit arbejde eller se flere cases.",
+      roleLine: "Frontendudvikler · Peytz & Co. · København",
       downloadCv: "Download CV",
     },
     notFound: {
@@ -55,9 +78,9 @@ export const ui = {
       funbox: "Åbn Funbox",
     },
     meta: {
-      title: "Oliver Hanert · Frontend-udvikler & digital designer",
+      title: "Oliver Hanert · Frontendudvikler med blik for design",
       description:
-        "Portfolio for Oliver Hanert. Frontend-udvikler og digital designer i København. Websites, platforme og digitale produkter for organisationer og brands.",
+        "Portfolio for Oliver Hanert. Frontendudvikler i København med stærkt blik for design, brugeroplevelse og indholdstunge digitale platforme.",
     },
   },
   en: {
@@ -66,18 +89,38 @@ export const ui = {
       back: "← Back",
     },
     home: {
-      heroLines: [
-        "Web developer with a passion for design.",
-        "I'm a multimedia design graduate working as a frontend developer in Copenhagen. I build websites and platforms in WordPress and React, and I always aim to create solutions that work well and feel right.",
+      heroEyebrow: "Oliver Hanert",
+      heroTitle: "Frontend developer with an eye for design and user experience",
+      heroBody:
+        "I work as a frontend developer in Copenhagen and do my best work where design becomes a real product. I build websites and platforms in WordPress and React, and I spend much of my energy on the small choices that decide whether a solution merely works — or actually feels good to use.",
+      workTitle: "What I work with",
+      workAreas: [
+        "Front-end development",
+        "Figma and design implementation",
+        "WordPress and React",
+        "AI in design-to-code workflows",
+        "Content-heavy websites and platforms",
+        "User experience, structure and craft",
       ],
-      projectsLabel: "Projects",
-      projectsIntro:
-        "A selection of websites, platforms and campaigns I've helped build.",
-      cta: "Want to know more?",
-      ctaButton: "Contact",
+      featuredLabel: "Selected cases",
+      featuredIntro:
+        "Four projects that show how I work with content, structure, accessibility and design implementation in practice.",
+      moreProjectsLabel: "More projects",
+      moreProjectsIntro: "Other websites, platforms and campaigns I have helped build.",
+      howIWorkTitle: "How I work",
+      howIWorkBody:
+        "I thrive in the space between design and implementation, where ideas can still be challenged and improved before they are locked in. I care that solutions do not only work technically, but also feel natural to use — especially when content, structure and detail must come together in the finished experience.",
+      contactTitle: "Want to hear more about my work?",
+      contactBody:
+        "I am always open to a good conversation about digital products, front-end, design and new opportunities. Write or call if you want to hear more about my work or see more cases.",
+      contactEmail: "Email",
+      contactPhone: "Phone",
+      contactLinkedin: "LinkedIn",
       clientsTitle: "Clients I've worked with",
       funboxSticker: "Open Funbox",
       projectsKeyboardHint: "Use ↑ ↓ and Enter to browse projects",
+      readCase: "Read case",
+      myRole: "My role",
     },
     project: {
       visitSite: "Visit site",
@@ -89,6 +132,7 @@ export const ui = {
       role: "Role",
       agency: "Agency",
       stack: "Stack",
+      focus: "Focus",
       close: "Close",
       galleryTitle: "Project imagery",
     },
@@ -103,7 +147,9 @@ export const ui = {
     },
     contacts: {
       title: "Contact",
-      roleLine: "Digital designer & frontend developer · Peytz & Co. · Copenhagen",
+      intro:
+        "I am always open to a good conversation about digital products, front-end, design and new opportunities. Write or call if you want to hear more about my work or see more cases.",
+      roleLine: "Frontend developer · Peytz & Co. · Copenhagen",
       downloadCv: "Download CV",
     },
     notFound: {
@@ -114,9 +160,9 @@ export const ui = {
       funbox: "Open Funbox",
     },
     meta: {
-      title: "Oliver Hanert · Frontend developer & digital designer",
+      title: "Oliver Hanert · Frontend developer with an eye for design",
       description:
-        "Portfolio of Oliver Hanert. Frontend developer and digital designer in Copenhagen. Websites, platforms and digital products for organisations and brands.",
+        "Portfolio of Oliver Hanert. Frontend developer in Copenhagen with a strong eye for design, user experience and content-heavy digital platforms.",
     },
   },
 } as const;

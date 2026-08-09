@@ -1,6 +1,7 @@
 import type { Project } from "@/data/types";
 import { useLanguage } from "@/i18n/context";
 import { Button } from "@/components/Button";
+import { ProjectLabels } from "@/components/ProjectLabels";
 
 type Props = {
   project: Project;
@@ -30,6 +31,10 @@ export function ProjectMeta({ project, className = "" }: Props) {
           <p className="type-meta-value">{project.agency}</p>
         </div>
       )}
+      <div>
+        <p className="type-label mb-3">{t.project.focus}</p>
+        <ProjectLabels labels={project.labels} accent={project.accent} />
+      </div>
       <div>
         <p className="type-label mb-3">{t.project.stack}</p>
         <div className="flex flex-wrap gap-1.5">
