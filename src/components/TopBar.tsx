@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { OHMark } from "./OHMark";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/i18n/context";
-import { MONO } from "@/lib/constants";
+import { MONO, SITE } from "@/lib/constants";
 
 export function TopBar({ dark = false, className = "" }: { dark?: boolean; className?: string }) {
   const navigate = useNavigate();
@@ -29,20 +29,38 @@ export function TopBar({ dark = false, className = "" }: { dark?: boolean; class
 
       <div className="flex items-center gap-4 sm:gap-5">
         <LanguageSwitcher dark={dark} />
-        <button
-          onClick={() => (isHome ? navigate("/contacts") : navigate("/"))}
-          className="hover:opacity-40 transition-opacity"
-          style={{
-            fontFamily: MONO,
-            fontSize: 10,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            color: dark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.35)",
-            cursor: "none",
-          }}
-        >
-          {isHome ? t.nav.contact : t.nav.back}
-        </button>
+        {isHome ? (
+          <a
+            href={`mailto:${SITE.email}`}
+            className="hover:opacity-40 transition-opacity"
+            style={{
+              fontFamily: MONO,
+              fontSize: 10,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: dark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.35)",
+              cursor: "none",
+              textDecoration: "none",
+            }}
+          >
+            {t.nav.contact}
+          </a>
+        ) : (
+          <button
+            onClick={() => navigate("/")}
+            className="hover:opacity-40 transition-opacity"
+            style={{
+              fontFamily: MONO,
+              fontSize: 10,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: dark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.35)",
+              cursor: "none",
+            }}
+          >
+            {t.nav.back}
+          </button>
+        )}
       </div>
     </motion.header>
   );

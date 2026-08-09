@@ -1,18 +1,27 @@
 import img001 from "@/assets/projects/001-hero.jpg";
+import img001g1 from "@/assets/projects/001-gallery-1.jpg";
+import img001g2 from "@/assets/projects/001-gallery-2.jpg";
 import img002 from "@/assets/projects/002-hero.webp";
+import img002g1 from "@/assets/projects/002-gallery-1.jpg";
+import img002g2 from "@/assets/projects/002-gallery-2.jpg";
 import img003 from "@/assets/projects/003-hero.jpg";
 import img004 from "@/assets/projects/004-hero.jpg";
+import img004g1 from "@/assets/projects/004-gallery-1.jpg";
+import img004g2 from "@/assets/projects/004-gallery-2.jpg";
 import img005 from "@/assets/projects/005-hero.jpg";
 import img007 from "@/assets/projects/007-hero.jpg";
 import img008 from "@/assets/projects/008-hero.jpg";
+import img008g1 from "@/assets/projects/008-gallery-1.jpg";
+import img008g2 from "@/assets/projects/008-gallery-2.jpg";
 import img009 from "@/assets/projects/009-hero.jpg";
 import img010 from "@/assets/projects/010-hero.webp";
 import img011 from "@/assets/projects/011-hero.jpg";
 import img012 from "@/assets/projects/012-hero.webp";
 import img013 from "@/assets/projects/013-hero.jpg";
 import img014 from "@/assets/projects/014-hero.webp";
+import img015 from "@/assets/projects/015-hero.jpg";
 import img016 from "@/assets/projects/016-hero.jpg";
-import img017 from "@/assets/projects/017-hero.svg";
+import img017 from "@/assets/projects/017-hero.jpg";
 
 import type { ProjectGalleryItem } from "./types";
 
@@ -29,13 +38,13 @@ export type ProjectBase = {
   gallery?: ProjectGalleryItem[];
 };
 
-export const FEATURED_PROJECT_IDS = ["002", "007", "004", "014"] as const;
+export const FEATURED_PROJECT_IDS = ["002", "008", "004", "001"] as const;
 
 export const SECONDARY_PROJECT_IDS = [
-  "001",
+  "007",
+  "014",
   "003",
   "005",
-  "008",
   "009",
   "010",
   "011",
@@ -46,11 +55,15 @@ export const SECONDARY_PROJECT_IDS = [
   "017",
 ] as const;
 
-function caseGallery(hero: string, title: string): ProjectGalleryItem[] {
+function caseGallery(
+  hero: string,
+  title: string,
+  extras: [string, string],
+): ProjectGalleryItem[] {
   return [
     { src: hero, alt: `${title} — overblik`, aspect: "16/9", wide: true },
     {
-      src: hero,
+      src: extras[0],
       alt: `${title} — detalje`,
       aspect: "4/5",
       fit: "cover",
@@ -58,7 +71,7 @@ function caseGallery(hero: string, title: string): ProjectGalleryItem[] {
       wide: false,
     },
     {
-      src: hero,
+      src: extras[1],
       alt: `${title} — mobil`,
       aspect: "9/16",
       fit: "cover",
@@ -77,6 +90,8 @@ export const PROJECTS_BASE: ProjectBase[] = [
     agency: "Kathart",
     url: "https://dtusciencepark.com",
     accent: "#1c3d5a",
+    featured: true,
+    gallery: caseGallery(img001, "DTU Science Park", [img001g1, img001g2]),
   },
   {
     id: "002",
@@ -88,7 +103,7 @@ export const PROJECTS_BASE: ProjectBase[] = [
     url: "https://folkeskolen.dk",
     accent: "#b91c1c",
     featured: true,
-    gallery: caseGallery(img002, "Folkeskolen"),
+    gallery: caseGallery(img002, "Folkeskolen", [img002g1, img002g2]),
   },
   {
     id: "003",
@@ -110,7 +125,7 @@ export const PROJECTS_BASE: ProjectBase[] = [
     url: "https://kf.wp.prod.combell.peytz.dk",
     accent: "#374151",
     featured: true,
-    gallery: caseGallery(img004, "Konstruktørforeningen"),
+    gallery: caseGallery(img004, "Konstruktørforeningen", [img004g1, img004g2]),
   },
   {
     id: "005",
@@ -131,8 +146,6 @@ export const PROJECTS_BASE: ProjectBase[] = [
     agency: "Peytz & Co.",
     url: "https://diabetes.wp.prod.combell.peytz.dk",
     accent: "#0369a1",
-    featured: true,
-    gallery: caseGallery(img007, "Diabetesforeningen"),
   },
   {
     id: "008",
@@ -143,6 +156,8 @@ export const PROJECTS_BASE: ProjectBase[] = [
     agency: "Peytz & Co.",
     url: "https://www.gigtforeningen.dk",
     accent: "#7c3aed",
+    featured: true,
+    gallery: caseGallery(img008, "Gigtforeningen", [img008g1, img008g2]),
   },
   {
     id: "009",
@@ -201,14 +216,12 @@ export const PROJECTS_BASE: ProjectBase[] = [
     agency: "Kathart",
     url: "https://vaerdibyg.dk",
     accent: "#ca8a04",
-    featured: true,
-    gallery: caseGallery(img014, "Værdibyg"),
   },
   {
     id: "015",
     year: "2022",
     categoryKey: "Digital design",
-    image: "",
+    image: img015,
     tech: ["WordPress", "CSS/SCSS", "Figma", "Motion graphics"],
     agency: "Holdet.dk / Swush",
     url: "https://holdet.dk",

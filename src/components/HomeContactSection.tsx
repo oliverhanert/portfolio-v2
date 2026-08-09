@@ -127,7 +127,7 @@ export function HomeContactSection() {
       </div>
 
       <div className="max-w-6xl mx-auto mt-12 sm:mt-14">
-        <Button href="/contacts" variant="outline">
+        <Button href={`mailto:${SITE.email}`} variant="outline">
           {t.nav.contact}
         </Button>
       </div>

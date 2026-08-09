@@ -22,7 +22,7 @@ export const ui = {
       ],
       featuredLabel: "Udvalgte cases",
       featuredIntro:
-        "Fire projekter, der viser, hvordan jeg arbejder med indhold, struktur, tilgængelighed og designimplementering i praksis.",
+        "Fire projekter der viser, hvordan jeg arbejder med indhold, struktur, redesign og designimplementering i praksis.",
       moreProjectsLabel: "Flere projekter",
       moreProjectsIntro: "Andre websites, platforme og kampagner jeg har været med til at bygge.",
       howIWorkTitle: "Sådan arbejder jeg",
@@ -104,7 +104,7 @@ export const ui = {
       ],
       featuredLabel: "Selected cases",
       featuredIntro:
-        "Four projects that show how I work with content, structure, accessibility and design implementation in practice.",
+        "Four projects that show how I work with content, structure, redesign and design implementation in practice.",
       moreProjectsLabel: "More projects",
       moreProjectsIntro: "Other websites, platforms and campaigns I have helped build.",
       howIWorkTitle: "How I work",

@@ -16,9 +16,11 @@ export const projectContent: Record<Locale, Record<string, ProjectCopy>> = {
       title: "DTU Science Park",
       tagline: "Nyt website udviklet som del af et rebrand og en ny visuel identitet.",
       story:
-        "DTU Science Park skulle have en hjemmeside, der matchede en ny visuel identitet og kunne håndtere komplekst indhold, flersprogethed og specialbyggede moduler. Jeg udviklede løsningen i WordPress med fokus på struktur, performance og en oplevelse, der føltes moderne uden at miste faglig tyngde.",
+        "DTU Science Park skulle have en hjemmeside, der matchede en ny visuel identitet og kunne håndtere komplekst indhold på tværs af sprog, formularer og specialmoduler. Jeg udviklede løsningen i WordPress med fokus på struktur, performance og en oplevelse, der føltes moderne uden at miste faglig tyngde — fra billedkaruseller og tabs til flersproget opsætning og integrationer.",
+      highlight:
+        "Et projekt der viser, hvordan et rebrand skal omsættes til et levende website — ikke bare en ny overflade, men en løsning der kan bære komplekst indhold i praksis.",
       role: "Webudvikler",
-      labels: ["WordPress", "Frontend", "Rebrand"],
+      labels: ["WordPress", "Frontend", "Designimplementering", "Rebrand"],
       imageAlt: "DTU Science Park forsiden",
     },
     "002": {
@@ -74,9 +76,11 @@ export const projectContent: Record<Locale, Record<string, ProjectCopy>> = {
       title: "Gigtforeningen",
       tagline: "Redesign med fokus på varme, tydelighed og en tryg brugeroplevelse.",
       story:
-        "Gigtforeningen skulle have et site, der føltes nært og menneskeligt uden at miste faglig tyngde. Jeg byggede frontend i React med fokus på overskuelig navigation, genkendelige skabeloner og et udtryk, der møder brugerne der, hvor de er.",
-      role: "Frontend-udvikler",
-      labels: ["Frontend", "Redesign", "Patientorganisation"],
+        "Gigtforeningen skulle have et site, der føltes nært og menneskeligt uden at miste en patientorganisations faglige tyngde. Jeg arbejdede med frontend og den designnære omsætning af løsningen med fokus på overskuelig navigation, genkendelige skabeloner og et udtryk, der møder brugerne der, hvor de er. Projektet viser den type arbejde, hvor oplevelse, indhold og tillid skal hænge tæt sammen.",
+      highlight:
+        "Balancen mellem professionelt og personligt var hele pointen — og det kommer tydeligst frem i de små valg omkring typografi, spacing og navigation.",
+      role: "Frontend-udvikler & designimplementering",
+      labels: ["Frontend", "Redesign", "Designimplementering", "Patientorganisation"],
       imageAlt: "Gigtforeningen forsiden",
     },
     "009": {
@@ -166,9 +170,11 @@ export const projectContent: Record<Locale, Record<string, ProjectCopy>> = {
       title: "DTU Science Park",
       tagline: "New website developed as part of a rebrand and new visual identity.",
       story:
-        "DTU Science Park needed a website that matched a new visual identity and could handle complex content, multilingual setup and custom modules. I built the solution in WordPress with a focus on structure, performance and an experience that felt modern without losing professional weight.",
+        "DTU Science Park needed a website that matched a new visual identity and could handle complex content across languages, forms and custom modules. I built the solution in WordPress with a focus on structure, performance and an experience that felt modern without losing professional weight — from image carousels and tabs to multilingual setup and integrations.",
+      highlight:
+        "A project that shows how a rebrand must become a living website — not just a new surface, but a solution that can carry complex content in practice.",
       role: "Web developer",
-      labels: ["WordPress", "Frontend", "Rebrand"],
+      labels: ["WordPress", "Frontend", "Design implementation", "Rebrand"],
       imageAlt: "DTU Science Park homepage",
     },
     "002": {
@@ -224,9 +230,11 @@ export const projectContent: Record<Locale, Record<string, ProjectCopy>> = {
       title: "Gigtforeningen",
       tagline: "Redesign focused on warmth, clarity and a reassuring user experience.",
       story:
-        "Gigtforeningen needed a site that felt close and human without losing professional weight. I built the front-end in React with a focus on clear navigation, recognisable templates and an expression that meets users where they are.",
-      role: "Frontend developer",
-      labels: ["Frontend", "Redesign", "Patient organisation"],
+        "Gigtforeningen needed a site that felt close and human without losing the professional weight of a patient organisation. I worked on the front-end and the design-adjacent translation of the solution, with a focus on clear navigation, recognisable templates and an expression that meets users where they are. The project shows work where experience, content and trust must hang closely together.",
+      highlight:
+        "The balance between professional and personal was the whole point — and it shows most clearly in the small choices around typography, spacing and navigation.",
+      role: "Frontend developer & design implementation",
+      labels: ["Frontend", "Redesign", "Design implementation", "Patient organisation"],
       imageAlt: "Gigtforeningen homepage",
     },
     "009": {

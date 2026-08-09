@@ -7,7 +7,6 @@ import { ClientLogoMarquee } from "@/components/ClientLogoMarquee";
 import { ClientLogo } from "@/components/ClientLogo";
 import { FunboxSticker } from "@/components/FunboxSticker";
 import { FeaturedCase } from "@/components/FeaturedCase";
-import { WorkAreas } from "@/components/WorkAreas";
 import { HowIWorkSection } from "@/components/HowIWorkSection";
 import { HomeContactSection } from "@/components/HomeContactSection";
 import portrait from "@/assets/oliver-portrait.jpg";
@@ -267,8 +266,6 @@ export function HomePage() {
         />
       </section>
 
-      <WorkAreas />
-
       <section>
         <div className="px-5 sm:px-10 pt-14 sm:pt-16 pb-4">
           <p className="type-eyebrow mb-4" style={{ color: "rgba(0,0,0,0.28)" }}>
@@ -338,6 +335,9 @@ export function HomePage() {
           {SITE.name} &copy; {SITE.year}
         </span>
         <div className="flex gap-5" style={{ fontFamily: MONO, fontSize: 9, letterSpacing: "0.06em" }}>
+          <a href={`mailto:${SITE.email}`} className="hover:opacity-60 transition-opacity">
+            {t.nav.contact}
+          </a>
           <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity">
             LinkedIn
           </a>
