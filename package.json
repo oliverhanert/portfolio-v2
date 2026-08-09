@@ -8,6 +8,7 @@
     "dev": "vite",
     "prebuild": "node scripts/generate-sitemap.mjs",
     "build": "tsc --noEmit && vite build",
+    "cv:pdf": "vite build && node scripts/generate-cv-pdf.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "@types/react-dom": "18.3.5",
     "@vitejs/plugin-react": "4.7.0",
     "tailwindcss": "4.1.12",
+    "puppeteer": "24.16.0",
     "typescript": "5.8.3",
     "vite": "6.3.5"
   }

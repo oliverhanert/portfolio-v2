@@ -7,19 +7,22 @@ import { HomePage } from "@/pages/HomePage";
 import { ProjectPage } from "@/pages/ProjectPage";
 import { FunboxPage } from "@/pages/FunboxPage";
 import { ContactsPage } from "@/pages/ContactsPage";
+import { CvPage } from "@/pages/CvPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 
 function AppInner() {
   const location = useLocation();
+  const isCv = location.pathname === "/cv";
 
   return (
     <>
       <ScrollToTop />
-      <CustomCursor />
+      {!isCv && <CustomCursor />}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
           <Route path="/contacts" element={<ContactsPage />} />
+          <Route path="/cv" element={<CvPage />} />
           <Route path="/funbox" element={<FunboxPage />} />
           <Route path="/projects/:id" element={<ProjectPage />} />
           <Route path="*" element={<NotFoundPage />} />

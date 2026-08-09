@@ -44,7 +44,7 @@ export const ui = {
     },
     contacts: {
       title: "Kontakt",
-      roleLine: "Frontend-udvikler · Peytz & Co. · København",
+      roleLine: "Digital designer & frontend-udvikler · Peytz & Co. · København",
       downloadCv: "Download CV",
     },
     notFound: {
@@ -103,7 +103,7 @@ export const ui = {
     },
     contacts: {
       title: "Contact",
-      roleLine: "Frontend developer · Peytz & Co. · Copenhagen",
+      roleLine: "Digital designer & frontend developer · Peytz & Co. · Copenhagen",
       downloadCv: "Download CV",
     },
     notFound: {

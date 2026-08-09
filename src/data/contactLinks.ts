@@ -14,6 +14,7 @@ export type ContactItem = {
   subtitle?: string;
   href?: string;
   external?: boolean;
+  download?: string;
   action?: "print";
 };
 
@@ -46,9 +47,10 @@ export const CONTACT_ITEMS: ContactItem[] = [
   },
   {
     id: "cv",
+    href: "/cv.pdf",
     value: "",
     iconSrc: cvIcon,
     iconSize: 40,
-    action: "print",
+    download: "CV-2026-Oliver-Dyrup-Hanert.pdf",
   },
 ];

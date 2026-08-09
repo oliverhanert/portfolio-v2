@@ -14,6 +14,7 @@ function ContactRow({
   onClick,
   href,
   external,
+  download,
   delay,
 }: {
   iconSrc?: string;
@@ -23,6 +24,7 @@ function ContactRow({
   onClick?: () => void;
   href?: string;
   external?: boolean;
+  download?: string;
   delay: number;
 }) {
   const className = "group flex items-center gap-5 sm:gap-6 md:cursor-none";
@@ -71,6 +73,7 @@ function ContactRow({
         href={href}
         target={external ? "_blank" : undefined}
         rel={external ? "noopener noreferrer" : undefined}
+        download={download}
         className={className}
         style={style}
         initial={{ opacity: 0, x: -12 }}
@@ -109,7 +112,7 @@ export function ContactsPage() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
       style={{ background: "#282018", color: "#fff", fontFamily: BODY }}
-      className="min-h-screen flex flex-col md:cursor-none print-cv-page"
+      className="min-h-screen flex flex-col md:cursor-none"
     >
       <TopBar dark className="no-print" />
 
@@ -163,7 +166,7 @@ export function ContactsPage() {
               subtitle={item.subtitle}
               href={item.href}
               external={item.external}
-              onClick={item.action === "print" ? () => window.print() : undefined}
+              download={item.download}
               delay={0.22 + i * 0.08}
             />
           ))}
